@@ -1,0 +1,13 @@
+Week of 3/30: Sprite work
+3/30: Watch Sprite Tutorials
+
+Ryan: Mobs/Projectiles/Application Flow
+Matthew: Boss
+Wes: Player
+
+
+Week of 4/6: Animation
+
+Ryan: Flying Idle/Flying Movement/Drone Gun/Drone Sword/Flying Death/Ground Idle/Ground Movement/Ground Death
+Matthew: Idle/Movement/Sweep Attack/Missile Firing Animation/Spawn Drones/Player on top attack/Stomp/Death
+Wes: Idle/Movement/Jump/Jump Attack (Overhead swing)/Small Melee/Large Melee/Projectile Firing/Death/Hitstun/Victory

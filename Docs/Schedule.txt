@@ -11,3 +11,9 @@ Week of 4/6: Animation
 Ryan: Flying Idle/Flying Movement/Drone Gun/Drone Sword/Flying Death/Ground Idle/Ground Movement/Ground Death
 Matthew: Idle/Movement/Sweep Attack/Missile Firing Animation/Spawn Drones/Player on top attack/Stomp/Death
 Wes: Idle/Movement/Jump/Jump Attack (Overhead swing)/Small Melee/Large Melee/Projectile Firing/Death/Hitstun/Victory
+
+Week of 4/13: Finishing Animation/Programming Movement
+
+Ryan: Movement and States/Basic Arena
+Matthew: Movement and States
+Wes: Movement and Jumping

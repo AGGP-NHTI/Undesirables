@@ -1,0 +1,23 @@
+RootGameObject 
+-- Sprite 
+-- Left Trigger
+-- Right Trigger 
+-- Attack Trigger 
+
+
+State Idle
+
+Players enters a Trigger Area...
+--- Turn off Triggers 
+Assign B and C points to the side indicated. 
+Transition to Attack down 
+
+
+State Attack Down 
+--- Do Damage to anything in Attack Trigger
+Swoop down to Bottom (B)
+
+
+State Attack UP 
+--- Do Damage to anything in Attack Trigger
+Swoop up to top (C)

@@ -22,6 +22,8 @@ public class HeroMovement : MonoBehaviour
     public Vector3 theScale;
     public float jumpForce = 5f;
     private float attackCoolDwn = 0.35f;
+    private float ProjattackCoolDwn = 0.75f;
+
 
     void Start()
     {
@@ -59,6 +61,29 @@ public class HeroMovement : MonoBehaviour
                     attackCoolDwn = 0.35f;
                     gameObject.GetComponent<Animator>().SetBool("isAttacking", false);
                     ismAing = false;
+                }
+            }
+        }
+        if (ispAing)
+        {
+            if (ProjattackCoolDwn > 0f)
+            {
+                ProjattackCoolDwn -= Time.deltaTime;
+            }
+            else
+            {
+                if (ispAingInAir)
+                {
+                    ProjattackCoolDwn = 0.75f;
+                    gameObject.GetComponent<Animator>().SetBool("ProjInAir", false);
+                    ispAing = false;
+                    ispAingInAir = false;
+                }
+                else
+                {
+                    ProjattackCoolDwn = 0.75f;
+                    gameObject.GetComponent<Animator>().SetBool("isProjAtt", false);
+                    ispAing = false;
                 }
             }
         }
@@ -150,10 +175,13 @@ public class HeroMovement : MonoBehaviour
     {
         if (inAir)
         {
-
+            ispAingInAir = true;
+            ispAing = true;
+            gameObject.GetComponent<Animator>().SetBool("ProjInAir", true);
         }
         else
         {
+            ispAing = true;
             gameObject.GetComponent<Animator>().SetBool("isProjAtt", true);
             Debug.Log("IT WORKED");
         }

@@ -412,7 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd8d58a9eb08c964793296dbfde3dafe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1UsesKB: 0
+  P1UsesKB: 1
   P2UsesKB: 0
   AllowJoins: 1
 --- !u!114 &1549623758
@@ -468,6 +468,7 @@ MonoBehaviour:
   PlayerNumber: 0
   PlayerType: 1
   HUD: {fileID: 0}
+  StartingPawn: {fileID: 2056174279}
 --- !u!4 &1581284073 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2635884617306704900, guid: 20c2741e65fadbb49bcae69bf713adf4,

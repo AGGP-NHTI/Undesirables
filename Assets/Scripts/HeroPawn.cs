@@ -13,6 +13,8 @@ public class HeroPawn : Pawn
 
     public virtual void Horizontal(float value)
     {
+        LOG("Horizontal:" + value);
+
         if (value == -1)
         {
             Debug.Log("MOVING LEFT");

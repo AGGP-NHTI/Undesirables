@@ -22,7 +22,7 @@ public class Projectile : Actor
 
 
 
-    void OnTriggerEnter2D(Collider other)
+    void OnTriggerEnter2D (Collider2D other)
     {
         Actor OtherActor = other.gameObject.GetComponentInParent<Actor>();
         if (other.CompareTag("Player"))
@@ -31,8 +31,9 @@ public class Projectile : Actor
             {
                 OtherActor.TakeDamage(this, damageAmount, null, Owner);
             }
+            OnDeath();
         }
-        OnDeath();
+
     }
 
     public virtual void OnDeath()

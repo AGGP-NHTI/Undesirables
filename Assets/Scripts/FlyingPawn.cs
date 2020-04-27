@@ -170,11 +170,11 @@ public class FlyingPawn : DronePawn
         health -= Value;
         if (health <= 0)
         {
+            IgnoresDamage = true;
             if (_controller)
             {
                 _controller.RequestSpectate();
             }
-            Debug.Log(gameObject.name + " was killed by " + Instigator.playerName + " ripripripripripripripriprip");
             isDead = true;
             StartCoroutine(deathAn());
         }

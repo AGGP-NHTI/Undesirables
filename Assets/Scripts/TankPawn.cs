@@ -121,7 +121,7 @@ public class TankPawn : DronePawn
 
     IEnumerator deathAn()
     {
-        tankAn.SetTrigger("Killed");
+        tankAn.SetBool("Killed", true);
         yield return new WaitForSeconds(5f);
         Destroy(gameObject);
     }
@@ -130,8 +130,9 @@ public class TankPawn : DronePawn
     {
         tankAn.SetTrigger("IsDamaged");
         IgnoresDamage = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         IgnoresDamage = false;
+        tankAn.ResetTrigger("IsDamaged");
     }
     protected override bool ProcessDamage(Actor Source, float Value, DamageEventInfo EventInfo = null, Controller Instigator = null)
     {
@@ -139,11 +140,11 @@ public class TankPawn : DronePawn
         health -= Value;
         if (health <= 0)
         {
+            IgnoresDamage = true;
             if (_controller)
             {
                 _controller.RequestSpectate();
             }
-            Debug.Log(gameObject.name + " was killed by " + Instigator.playerName + " ripripripripripripripriprip");
             isDead = true;
             StartCoroutine(deathAn());
         }

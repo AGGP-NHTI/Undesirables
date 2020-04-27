@@ -27,5 +27,32 @@ public class HeroPlayerController : PlayerController
         }
     }
 
+    public override void Fire1(bool value)
+    {
+        HeroPawn HP = ((HeroPawn)PossesedPawn);
+        if (HP)
+        {
+            HP.Fire1(value);
+        }
+    }
+
+    public override void Fire2(bool value)
+    {
+        HeroPawn HP = ((HeroPawn)PossesedPawn);
+        if (HP)
+        {
+            HP.Fire2(value);
+        }
+    }
+
+    public override void Fire3(bool value)
+    {
+        HeroPawn HP = ((HeroPawn)PossesedPawn);
+        if (HP)
+        {
+            HP.Fire3(value);
+        }
+    }
+
 
 }

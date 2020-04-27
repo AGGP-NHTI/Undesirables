@@ -25,9 +25,12 @@ public class Projectile : Actor
     void OnTriggerEnter(Collider other)
     {
         Actor OtherActor = other.gameObject.GetComponentInParent<Actor>();
-        if (OtherActor)
+        if (other.CompareTag("Player"))
         {
-            OtherActor.TakeDamage(this, damageAmount, null, Owner);
+            if (OtherActor)
+            {
+                OtherActor.TakeDamage(this, damageAmount, null, Owner);
+            }
         }
         OnDeath();
     }

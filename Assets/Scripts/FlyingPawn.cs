@@ -170,6 +170,7 @@ public class FlyingPawn : DronePawn
         health -= Value;
         if (health <= 0)
         {
+            IgnoresDamage = true;
             if (_controller)
             {
                 _controller.RequestSpectate();

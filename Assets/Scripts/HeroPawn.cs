@@ -7,7 +7,7 @@ public class HeroPawn : Pawn
     public float Health = 100.0f;
     public GameObject grenadePrefab;
     public GameObject grenadeSpawnLoc;
-    public Rigidbody2D rb;
+    Rigidbody2D rb;
     public float Speed = 50f;
     private float attackCoolDwn = 0.35f;
     private float ProjattackCoolDwn = 0.75f;
@@ -199,6 +199,17 @@ public class HeroPawn : Pawn
             IgnoresDamage = true;
             //Game.Self.PlayerDied(this, Source, EventInfo, Instigator);
         }
+
+        string DamageEventString = Source.ActorName + " " + EventInfo.DamageType.verb + " " + this.ActorName + " (" + Value.ToString() + " damage)";
+        if (Instigator)
+        {
+            DamageEventString = Instigator.playerName + " via " + DamageEventString;
+        }
+        else
+        {
+            DamageEventString = "The World via " + DamageEventString;
+        }
+        DAMAGELOG(DamageEventString);
 
         return false;
     }

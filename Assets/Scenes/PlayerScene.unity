@@ -127,80 +127,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7392128702299412095}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &146236127
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 850120778865274837, guid: bf125950c6cc4cf468c0d84673735564,
-        type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 2056174279}
-    - target: {fileID: 1253685711071643749, guid: bf125950c6cc4cf468c0d84673735564,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.9953012
-      objectReference: {fileID: 0}
-    - target: {fileID: 1253685711071643749, guid: bf125950c6cc4cf468c0d84673735564,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.1194353
-      objectReference: {fileID: 0}
-    - target: {fileID: 1253685711071643749, guid: bf125950c6cc4cf468c0d84673735564,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1253685711071643749, guid: bf125950c6cc4cf468c0d84673735564,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1253685711071643749, guid: bf125950c6cc4cf468c0d84673735564,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1253685711071643749, guid: bf125950c6cc4cf468c0d84673735564,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1253685711071643749, guid: bf125950c6cc4cf468c0d84673735564,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1253685711071643749, guid: bf125950c6cc4cf468c0d84673735564,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1253685711071643749, guid: bf125950c6cc4cf468c0d84673735564,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1253685711071643749, guid: bf125950c6cc4cf468c0d84673735564,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1253685711071643749, guid: bf125950c6cc4cf468c0d84673735564,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5206032725858165255, guid: bf125950c6cc4cf468c0d84673735564,
-        type: 3}
-      propertyPath: m_Name
-      value: Tank Drone (Moving + Gun)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bf125950c6cc4cf468c0d84673735564, type: 3}
 --- !u!4 &255643358 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5286543170755945965, guid: 20c2741e65fadbb49bcae69bf713adf4,
@@ -600,7 +526,86 @@ MonoBehaviour:
   inAir: 0
   theScale: {x: 0, y: 0, z: 0}
   jumpForce: 500
-  damageAmount: 10
+  damageAmount: 34
+--- !u!1001 &1314917998
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6260387573132616592, guid: 8c147ef77e998214bb29f3aea93125f9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.4293451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6260387573132616592, guid: 8c147ef77e998214bb29f3aea93125f9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.8259344
+      objectReference: {fileID: 0}
+    - target: {fileID: 6260387573132616592, guid: 8c147ef77e998214bb29f3aea93125f9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.533203
+      objectReference: {fileID: 0}
+    - target: {fileID: 6260387573132616592, guid: 8c147ef77e998214bb29f3aea93125f9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6260387573132616592, guid: 8c147ef77e998214bb29f3aea93125f9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6260387573132616592, guid: 8c147ef77e998214bb29f3aea93125f9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6260387573132616592, guid: 8c147ef77e998214bb29f3aea93125f9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6260387573132616592, guid: 8c147ef77e998214bb29f3aea93125f9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6260387573132616592, guid: 8c147ef77e998214bb29f3aea93125f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6260387573132616592, guid: 8c147ef77e998214bb29f3aea93125f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6260387573132616592, guid: 8c147ef77e998214bb29f3aea93125f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6260387573132616623, guid: 8c147ef77e998214bb29f3aea93125f9,
+        type: 3}
+      propertyPath: m_Name
+      value: Drone
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885971707164955953, guid: 8c147ef77e998214bb29f3aea93125f9,
+        type: 3}
+      propertyPath: ground
+      value: 
+      objectReference: {fileID: 1796917346}
+    - target: {fileID: 6885971707164955953, guid: 8c147ef77e998214bb29f3aea93125f9,
+        type: 3}
+      propertyPath: health
+      value: 25
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8c147ef77e998214bb29f3aea93125f9, type: 3}
 --- !u!114 &1341794133 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2910547756115542454, guid: 20c2741e65fadbb49bcae69bf713adf4,

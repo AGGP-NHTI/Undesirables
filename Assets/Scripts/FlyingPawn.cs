@@ -174,7 +174,6 @@ public class FlyingPawn : DronePawn
             {
                 _controller.RequestSpectate();
             }
-            Debug.Log(gameObject.name + " was killed by " + Instigator.playerName + " ripripripripripripripriprip");
             isDead = true;
             StartCoroutine(deathAn());
         }

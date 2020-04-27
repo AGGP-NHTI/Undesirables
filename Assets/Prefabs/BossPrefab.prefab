@@ -80,7 +80,7 @@ SpriteRenderer:
   m_Size: {x: 1.3, y: 0.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &5975905566680625135
@@ -101,8 +101,8 @@ MonoBehaviour:
   - {fileID: 5975905566924805022}
   - {fileID: 5975905568437754595}
   m_Bounds:
-    m_Center: {x: -0.000000059604645, y: -0.0000005662441, z: 0}
-    m_Extent: {x: 0.65, y: 0.27500004, z: 0}
+    m_Center: {x: -0.00000017881393, y: -0.00000044703484, z: 0}
+    m_Extent: {x: 0.65, y: 0.27499995, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905566758009260
 GameObject:
@@ -215,7 +215,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1.11}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &5975905566801173541
@@ -236,8 +236,8 @@ MonoBehaviour:
   - {fileID: 5975905567195624099}
   - {fileID: 5975905568402338525}
   m_Bounds:
-    m_Center: {x: 0.001544863, y: -0.00000047683716, z: 0}
-    m_Extent: {x: 0.49845508, y: 0.55500007, z: 0}
+    m_Center: {x: 0.0015448034, y: -0.00000047683716, z: 0}
+    m_Extent: {x: 0.49845505, y: 0.55500007, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905566924805023
 GameObject:
@@ -380,7 +380,7 @@ SpriteRenderer:
   m_Size: {x: 2.78, y: 2.43}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &5975905566953490969
@@ -404,8 +404,8 @@ MonoBehaviour:
   - {fileID: 5975905568387435588}
   - {fileID: 5975905568288568070}
   m_Bounds:
-    m_Center: {x: 0.0019954443, y: 0.05410993, z: 0}
-    m_Extent: {x: 1.3880051, y: 1.1591105, z: 0}
+    m_Center: {x: 0.0019955635, y: 0.05410993, z: 0}
+    m_Extent: {x: 1.388005, y: 1.1591104, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905566972516788
 GameObject:
@@ -701,7 +701,7 @@ SpriteRenderer:
   m_Size: {x: 1.41, y: 1.73}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &5975905567468450806
@@ -724,7 +724,7 @@ MonoBehaviour:
   - {fileID: 5975905567497916547}
   - {fileID: 5975905567474844328}
   m_Bounds:
-    m_Center: {x: -0.12682468, y: -0.0045760274, z: 0}
+    m_Center: {x: -0.12682456, y: -0.004576087, z: 0}
     m_Extent: {x: 0.57817525, y: 0.8604257, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905567474844329
@@ -897,7 +897,7 @@ SpriteRenderer:
   m_Size: {x: 1.94, y: 2.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &5975905567750229475
@@ -919,8 +919,8 @@ MonoBehaviour:
   - {fileID: 5975905568559361285}
   - {fileID: 5975905568387435588}
   m_Bounds:
-    m_Center: {x: 0.034232616, y: -0.078149796, z: 0}
-    m_Extent: {x: 0.91423273, y: 1.3748993, z: 0}
+    m_Center: {x: 0.034232497, y: -0.078149915, z: 0}
+    m_Extent: {x: 0.9142326, y: 1.3748991, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905568032717615
 GameObject:
@@ -1033,7 +1033,7 @@ SpriteRenderer:
   m_Size: {x: 1.95, y: 2.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &5975905568231705447
@@ -1058,7 +1058,7 @@ MonoBehaviour:
   - {fileID: 5975905567195624099}
   m_Bounds:
     m_Center: {x: -0.045000255, y: -0.0412606, z: 0}
-    m_Extent: {x: 0.9300002, y: 1.3337405, z: 0}
+    m_Extent: {x: 0.9300003, y: 1.3337405, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905568288568071
 GameObject:
@@ -1358,7 +1358,7 @@ SpriteRenderer:
   m_Size: {x: 1.17, y: 1.71}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &5975905568700682672
@@ -1380,8 +1380,8 @@ MonoBehaviour:
   - {fileID: 5975905568711564354}
   - {fileID: 5975905567524837892}
   m_Bounds:
-    m_Center: {x: -0.010425091, y: 0.00052314997, z: 0}
-    m_Extent: {x: 0.5747701, y: 0.8548726, z: 0}
+    m_Center: {x: -0.01042515, y: 0.00052309036, z: 0}
+    m_Extent: {x: 0.57477003, y: 0.8548726, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905568711564355
 GameObject:

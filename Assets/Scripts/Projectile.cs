@@ -22,7 +22,7 @@ public class Projectile : Actor
 
 
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider other)
     {
         Actor OtherActor = other.gameObject.GetComponentInParent<Actor>();
         if (other.CompareTag("Player"))

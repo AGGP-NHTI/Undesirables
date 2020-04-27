@@ -8,7 +8,7 @@ public class HeroPawn : Pawn
     public GameObject grenadePrefab;
     public GameObject grenadeSpawnLoc;
     public Rigidbody2D rb;
-    public float Speed = 500f;
+    public float Speed = 50f;
     private float attackCoolDwn = 0.35f;
     private float ProjattackCoolDwn = 0.75f;
     public bool facingRight;
@@ -86,13 +86,13 @@ public class HeroPawn : Pawn
         {
             Debug.Log("MOVING LEFT");
             gameObject.GetComponent<Animator>().SetBool("isWalking", true);
-            rb.velocity = new Vector2(-1 * Speed * Time.deltaTime, rb.velocity.y);
+            rb.velocity = new Vector2(-1 * Speed, rb.velocity.y);
             Flip();
         }
         if (value == 1)
         {
             gameObject.GetComponent<Animator>().SetBool("isWalking", true);
-            rb.velocity = new Vector2(1 * Speed * Time.deltaTime, rb.velocity.y);
+            rb.velocity = new Vector2(1 * Speed, rb.velocity.y);
             Flip();
         }
         if (value == 0)
@@ -181,6 +181,11 @@ public class HeroPawn : Pawn
             gameObject.GetComponent<Animator>().SetBool("justJumped", false);
             inAir = false;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
     }
 
     protected override bool ProcessDamage(Actor Source, float Value, DamageEventInfo EventInfo, Controller Instigator)

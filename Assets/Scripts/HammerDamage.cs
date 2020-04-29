@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HammerDamage : HeroPawn
 {
-    public float damageAmount = 100f;
+    private float damageAmount = 100f;
 
     void Start()
     {

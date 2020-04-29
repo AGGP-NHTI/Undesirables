@@ -7,6 +7,7 @@ public class HeroPawn : Pawn
     public float Health = 100.0f;
     public GameObject grenadePrefab;
     public GameObject grenadeSpawnLoc;
+    public Collider2D hammerHitBox;
     Rigidbody2D rb;
     public float Speed = 50f;
     private float attackCoolDwn = 0.35f;
@@ -23,6 +24,7 @@ public class HeroPawn : Pawn
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        hammerHitBox.enabled = false;
         theScale = Vector3.zero;
         facingRight = true;
     }
@@ -41,6 +43,7 @@ public class HeroPawn : Pawn
                 {
                     attackCoolDwn = 0.35f;
                     gameObject.GetComponent<Animator>().SetBool("attackInAir", false);
+                    hammerHitBox.enabled = false;
                     ismAing = false;
                     ismAingInAir = false;
                 }
@@ -48,6 +51,7 @@ public class HeroPawn : Pawn
                 {
                     attackCoolDwn = 0.35f;
                     gameObject.GetComponent<Animator>().SetBool("isAttacking", false);
+                    hammerHitBox.enabled = false;
                     ismAing = false;
                 }
             }
@@ -84,7 +88,6 @@ public class HeroPawn : Pawn
 
         if (value == -1)
         {
-            Debug.Log("MOVING LEFT");
             gameObject.GetComponent<Animator>().SetBool("isWalking", true);
             rb.velocity = new Vector2(-1 * Speed, rb.velocity.y);
             Flip();
@@ -149,12 +152,14 @@ public class HeroPawn : Pawn
         if (inAir)
         {
             gameObject.GetComponent<Animator>().SetBool("attackInAir", true);
+            hammerHitBox.enabled = true;
             ismAing = true;
             ismAingInAir = true;
         }
         else
         {
             gameObject.GetComponent<Animator>().SetBool("isAttacking", true);
+            hammerHitBox.enabled = true;
             ismAing = true;
         }
     }
@@ -183,10 +188,6 @@ public class HeroPawn : Pawn
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-    }
 
     protected override bool ProcessDamage(Actor Source, float Value, DamageEventInfo EventInfo, Controller Instigator)
     {

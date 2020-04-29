@@ -350,6 +350,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1885626452887347925, guid: 8c147ef77e998214bb29f3aea93125f9,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6260387573132616592, guid: 8c147ef77e998214bb29f3aea93125f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -419,6 +424,16 @@ PrefabInstance:
         type: 3}
       propertyPath: health
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885971707164955954, guid: 8c147ef77e998214bb29f3aea93125f9,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084284436671811391, guid: 8c147ef77e998214bb29f3aea93125f9,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c147ef77e998214bb29f3aea93125f9, type: 3}

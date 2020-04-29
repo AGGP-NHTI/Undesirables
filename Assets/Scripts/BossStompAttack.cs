@@ -5,22 +5,13 @@ using UnityEngine;
 public class BossStompAttack : Actor
 {
     float damageAmount = 25f;
-    public GameObject BossObj;
-    BossPawn Boss;
 
-    void Start()
+    public virtual void OnTriggerEnter2D(Collider2D other)
     {
-        Boss = BossObj.GetComponent<BossPawn>();
-    }
-
-    public virtual void OnTriggerEnter(Collider other)
-    {
-        Actor OtherActor = other.gameObject.GetComponentInParent<HeroPawn>();
+        HeroPawn OtherActor = other.gameObject.GetComponentInParent<HeroPawn>();
 
         if (OtherActor)
-        {
-            //Boss.toggleHitboxes(1);
-
+        {            
             OtherActor.TakeDamage(this, damageAmount, new DamageEventInfo(), Owner);
         }
     }

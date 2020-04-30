@@ -6,12 +6,13 @@ public class HeroPawn : Pawn
 {
     public float Health = 100.0f;
     public GameObject grenadePrefab;
+    public GameObject grenadeLeftPrefab;
     public GameObject grenadeSpawnLoc;
     public Collider2D hammerHitBox;
     Rigidbody2D rb;
     public float Speed = 50f;
     private float attackCoolDwn = 0.35f;
-    private float ProjattackCoolDwn = 0.75f;
+    private float ProjattackCoolDwn = 0.3f;
     public bool facingRight;
     private bool ismAing = false;
     private bool ispAing = false;
@@ -67,14 +68,30 @@ public class HeroPawn : Pawn
             {
                 if (ispAingInAir)
                 {
-                    ProjattackCoolDwn = 0.50f;
+                    if (facingRight)
+                    {
+                        Instantiate(grenadePrefab, grenadeSpawnLoc.transform.position, Quaternion.identity);
+                    }
+                    else
+                    {
+                        Instantiate(grenadeLeftPrefab, grenadeSpawnLoc.transform.position, Quaternion.identity);
+                    }
+                    ProjattackCoolDwn = 0.3f;
                     gameObject.GetComponent<Animator>().SetBool("ProjInAir", false);
                     ispAing = false;
                     ispAingInAir = false;
                 }
                 else
                 {
-                    ProjattackCoolDwn = 0.50f;
+                    if (facingRight)
+                    {
+                        Instantiate(grenadePrefab, grenadeSpawnLoc.transform.position, Quaternion.identity);
+                    }
+                    else
+                    {
+                        Instantiate(grenadeLeftPrefab, grenadeSpawnLoc.transform.position, Quaternion.identity);
+                    }
+                    ProjattackCoolDwn = 0.3f;
                     gameObject.GetComponent<Animator>().SetBool("isProjAtt", false);
                     ispAing = false;
                 }
@@ -194,11 +211,13 @@ public class HeroPawn : Pawn
         LOG("Took Damage");
         Controller controller = GetController();
         Health = Health - Value;
+        Debug.Log(Health);
         if (Health <= 0f)
         {
             Debug.Log(gameObject.name + " has died!");
             IgnoresDamage = true;
             //Game.Self.PlayerDied(this, Source, EventInfo, Instigator);
+            //Debug.Log(gameObject.name + " was killed by " + Instigator.playerName + " ripripripripripripripriprip");
         }
 
         string DamageEventString = Source.ActorName + " " + EventInfo.DamageType.verb + " " + this.ActorName + " (" + Value.ToString() + " damage)";

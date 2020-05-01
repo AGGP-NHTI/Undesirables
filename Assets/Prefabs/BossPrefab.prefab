@@ -541,7 +541,7 @@ MonoBehaviour:
   leftSwordHitboxObj: {fileID: 5975905568471096775}
   rightSwordHitboxObj: {fileID: 5975905568368604893}
   spawnpoint: {fileID: 1588284557}
-  flyingDrone: {fileID: 5603839749379761557, guid: 63b9982f415f2ff49b86a32c21ee03d4,
+  flyingDrone: {fileID: 6260387573132616623, guid: 8c147ef77e998214bb29f3aea93125f9,
     type: 3}
   groundDrone: {fileID: 7594712079538438191, guid: 523e4d3ac2dcf6143b144bfc33d0e107,
     type: 3}

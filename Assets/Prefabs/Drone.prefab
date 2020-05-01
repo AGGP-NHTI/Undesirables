@@ -417,6 +417,12 @@ PrefabInstance:
       propertyPath: flyHeight
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5897003065470812093, guid: 63b9982f415f2ff49b86a32c21ee03d4,
+        type: 3}
+      propertyPath: ground
+      value: 
+      objectReference: {fileID: 3174695247304648638, guid: 5e0a888039479274285cafa6034a412b,
+        type: 3}
     - target: {fileID: 6129376319966095567, guid: 63b9982f415f2ff49b86a32c21ee03d4,
         type: 3}
       propertyPath: m_LocalPosition.x

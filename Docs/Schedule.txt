@@ -23,6 +23,16 @@ Week of 4/27
 Finish any missing work
 
 
+Weekend of 5/1
+
+Fight UI: Health Bars, Ammo (If Implemented)
+Menus and Screens: Main Menu, Victory, Defeat Screen
+Effects and Assets: Damage Effects, walls;
+
+Ryan: Tank and drone colliders, Fight UI
+Matthew: Drone Spawning, Menus and Screens
+Wes: Grenade Explosion, Player Jump, Effects and Assets
+
 
 5/4: Team Meeting at 2:30
 5/5: 5:00PM: Presentation Meeting

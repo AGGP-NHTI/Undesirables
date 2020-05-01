@@ -162,7 +162,6 @@ public class BossPawn : Pawn
     void stateStomp()
     {
         animatorReset();
-
         StartCoroutine(stomp());
     }
 

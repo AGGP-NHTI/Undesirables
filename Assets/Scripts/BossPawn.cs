@@ -43,6 +43,7 @@ public class BossPawn : Pawn
     bool isAttacking = false;
     Vector3 theScale;
 
+    public Canvas bossHealthUI;
     public Slider slider;
 
     // Start is called before the first frame update
@@ -259,7 +260,7 @@ public class BossPawn : Pawn
     {
         animator.SetBool("hasDied", true);
 
-
+        bossHealthUI.gameObject.SetActive(false);
 
         animatorReset();
 

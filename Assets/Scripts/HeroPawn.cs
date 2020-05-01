@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HeroPawn : Pawn
 {
@@ -21,6 +22,8 @@ public class HeroPawn : Pawn
     public bool inAir = false;
     public Vector3 theScale;
     public float jumpForce = 500f;
+    public Canvas playerHealth;
+    public Slider sliderHealth;
 
     void Start()
     {
@@ -28,10 +31,12 @@ public class HeroPawn : Pawn
         hammerHitBox.enabled = false;
         theScale = Vector3.zero;
         facingRight = true;
+        sliderHealth.maxValue = Health;
     }
 
     private void Update()
     {
+        sliderHealth.value = Health;
         if (ismAing)
         {
             if (attackCoolDwn > 0f)

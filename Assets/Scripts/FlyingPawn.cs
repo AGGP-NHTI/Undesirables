@@ -33,7 +33,7 @@ public class FlyingPawn : DronePawn
         isDead = false;
         facingLeft = true;
         isFalling = true;
-        flyHeight = Random.Range(.75f, 3.0f);
+        flyHeight = Random.Range(.75f, 6.0f);
         colbox.enabled = true;
     }
 
@@ -123,7 +123,7 @@ public class FlyingPawn : DronePawn
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && !inAttack)
         {
             if (collision.transform.position.x > gameObject.transform.position.x)
             {

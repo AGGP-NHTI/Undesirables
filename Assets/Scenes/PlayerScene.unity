@@ -350,11 +350,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1885626452887347925, guid: 8c147ef77e998214bb29f3aea93125f9,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6260387573132616592, guid: 8c147ef77e998214bb29f3aea93125f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -420,21 +415,6 @@ PrefabInstance:
       propertyPath: ground
       value: 
       objectReference: {fileID: 1796917346}
-    - target: {fileID: 6885971707164955953, guid: 8c147ef77e998214bb29f3aea93125f9,
-        type: 3}
-      propertyPath: health
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 6885971707164955954, guid: 8c147ef77e998214bb29f3aea93125f9,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084284436671811391, guid: 8c147ef77e998214bb29f3aea93125f9,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c147ef77e998214bb29f3aea93125f9, type: 3}
 --- !u!1 &1549623756
@@ -700,6 +680,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tank Drone (Final)
       objectReference: {fileID: 0}
+    - target: {fileID: 7594712079538438191, guid: 523e4d3ac2dcf6143b144bfc33d0e107,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 523e4d3ac2dcf6143b144bfc33d0e107, type: 3}
 --- !u!1 &1796917346
@@ -713,7 +698,7 @@ GameObject:
   - component: {fileID: 1796917349}
   - component: {fileID: 1796917348}
   - component: {fileID: 1796917347}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: ground
   m_Icon: {fileID: 0}

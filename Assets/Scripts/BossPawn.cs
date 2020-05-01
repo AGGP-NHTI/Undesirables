@@ -45,8 +45,8 @@ public class BossPawn : Pawn
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        //slider.minValue = 0;
-        //slider.maxValue = startingHealth;
+        slider.minValue = 0;
+        slider.maxValue = startingHealth;
         currentState = new States(stateWalking);
 
         currentState();
@@ -54,7 +54,7 @@ public class BossPawn : Pawn
 
     void Update()
     {
-        //slider.value = currentHealth;
+        slider.value = currentHealth;
         if (!bossHasDied)
         {
 
@@ -117,21 +117,20 @@ public class BossPawn : Pawn
 
     void stateIdle()//plays idle anim and stops any other actions
     {
-        if (isAttacking == false)
+        isAttacking = false;
+        animatorReset();
+
+        rb.velocity = moveDirection * 0f;
+
+
+
+        if (!isCloseToPlayer())
         {
-            animatorReset();
+            currentState = new States(stateWalking);
 
-            rb.velocity = moveDirection * 0f;
-
-
-
-            if (!isCloseToPlayer())
-            {
-                currentState = new States(stateWalking);
-
-                currentState();
-            }
+            currentState();
         }
+    
     }
 
     void stateWalking()
@@ -168,7 +167,7 @@ public class BossPawn : Pawn
         isAttacking = true;
         yield return new WaitForSeconds(1.317f);
 
-        isAttacking = false;
+        
 
         yield return null;
     }
@@ -188,7 +187,7 @@ public class BossPawn : Pawn
         isAttacking = true;
         yield return new WaitForSeconds(2.1f);
 
-        isAttacking = false;
+        
 
         yield return null;
     }

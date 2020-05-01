@@ -127,6 +127,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 188607550}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &160441898 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1262835229, guid: 20c2741e65fadbb49bcae69bf713adf4,
+    type: 3}
+  m_PrefabInstance: {fileID: 188607550}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &188607550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -134,6 +140,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1262835230, guid: 20c2741e65fadbb49bcae69bf713adf4, type: 3}
+      propertyPath: hammerHitBox
+      value: 
+      objectReference: {fileID: 160441898}
     - target: {fileID: 1223243303117770904, guid: 20c2741e65fadbb49bcae69bf713adf4,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -430,6 +440,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 144789793}
+    - target: {fileID: 1381399058, guid: be26980ea9be8b54491dc116c7639fef, type: 3}
+      propertyPath: m_GravityScale
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381399058, guid: be26980ea9be8b54491dc116c7639fef, type: 3}
+      propertyPath: m_Mass
+      value: 1000000
+      objectReference: {fileID: 0}
     - target: {fileID: 5975905566972516788, guid: be26980ea9be8b54491dc116c7639fef,
         type: 3}
       propertyPath: m_Name

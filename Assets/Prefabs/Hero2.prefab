@@ -640,7 +640,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141667700021864556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.017, y: 0.576, z: 0}
+  m_LocalPosition: {x: 0.168, y: 0.576, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5827186624160289964}
@@ -1829,7 +1829,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d5d892cba26d59145bd440d9036cb3b3, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -1887,8 +1887,9 @@ MonoBehaviour:
   LogDamageEvents: 1
   IsSpectator: 1
   Health: 100
-  grenadePrefab: {fileID: 0}
-  grenadeSpawnLoc: {fileID: 0}
+  grenadePrefab: {fileID: 7237384474512951766, guid: d910a354587e0ab4b8deecb3c7c86ab1,
+    type: 3}
+  grenadeSpawnLoc: {fileID: 2141667700021864556}
   hammerHitBox: {fileID: 1262835229}
   Speed: 5
   facingRight: 0

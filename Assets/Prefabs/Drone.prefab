@@ -1,5 +1,62 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1100843207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1100843208}
+  - component: {fileID: 1100843209}
+  m_Layer: 9
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1100843208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100843207}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6581540858614956611}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1100843209
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100843207}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.22990966}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.5401807}
+  m_EdgeRadius: 0
 --- !u!61 &1885626452887347925
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -91,7 +148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6260387573132616592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Drone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,32 +285,52 @@ PrefabInstance:
     - target: {fileID: 1680112793717422159, guid: 63b9982f415f2ff49b86a32c21ee03d4,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.23870827
+      value: 0.23870812
       objectReference: {fileID: 0}
     - target: {fileID: 1876027184619344943, guid: 63b9982f415f2ff49b86a32c21ee03d4,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.07270803
+      value: -0.07270797
+      objectReference: {fileID: 0}
+    - target: {fileID: 1876027184619344943, guid: 63b9982f415f2ff49b86a32c21ee03d4,
+        type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.029202491
       objectReference: {fileID: 0}
     - target: {fileID: 1988225785697866123, guid: 63b9982f415f2ff49b86a32c21ee03d4,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.043433383
+      value: -0.04343359
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988225785697866123, guid: 63b9982f415f2ff49b86a32c21ee03d4,
+        type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.021500096
       objectReference: {fileID: 0}
     - target: {fileID: 2024554815266877619, guid: 63b9982f415f2ff49b86a32c21ee03d4,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.07720009
+      value: -0.07720021
       objectReference: {fileID: 0}
     - target: {fileID: 4572569378428652663, guid: 63b9982f415f2ff49b86a32c21ee03d4,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.029704321
+      value: -0.029704291
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572569378428652663, guid: 63b9982f415f2ff49b86a32c21ee03d4,
+        type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.0098612085
       objectReference: {fileID: 0}
     - target: {fileID: 5326403189615732808, guid: 63b9982f415f2ff49b86a32c21ee03d4,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.065840006
+      value: 0.065839946
+      objectReference: {fileID: 0}
+    - target: {fileID: 5326403189615732808, guid: 63b9982f415f2ff49b86a32c21ee03d4,
+        type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.04503973
       objectReference: {fileID: 0}
     - target: {fileID: 5603839749379761557, guid: 63b9982f415f2ff49b86a32c21ee03d4,
         type: 3}
@@ -280,6 +357,16 @@ PrefabInstance:
       propertyPath: colbox
       value: 
       objectReference: {fileID: 6885971707164955954}
+    - target: {fileID: 5897003065470812093, guid: 63b9982f415f2ff49b86a32c21ee03d4,
+        type: 3}
+      propertyPath: health
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5897003065470812093, guid: 63b9982f415f2ff49b86a32c21ee03d4,
+        type: 3}
+      propertyPath: flyHeight
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6129376319966095567, guid: 63b9982f415f2ff49b86a32c21ee03d4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -338,12 +425,22 @@ PrefabInstance:
     - target: {fileID: 7853743932247822664, guid: 63b9982f415f2ff49b86a32c21ee03d4,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.10362889
+      value: 0.10362871
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853743932247822664, guid: 63b9982f415f2ff49b86a32c21ee03d4,
+        type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.06274031
       objectReference: {fileID: 0}
     - target: {fileID: 8241822422759299444, guid: 63b9982f415f2ff49b86a32c21ee03d4,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.04874128
+      value: -0.04874134
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241822422759299444, guid: 63b9982f415f2ff49b86a32c21ee03d4,
+        type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.22878157
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63b9982f415f2ff49b86a32c21ee03d4, type: 3}

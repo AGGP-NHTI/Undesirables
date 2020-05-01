@@ -536,7 +536,7 @@ MonoBehaviour:
   LogDamageEvents: 1
   IsSpectator: 0
   animator: {fileID: 5975905566972516791}
-  player: {fileID: 7392128701739086386, guid: 20c2741e65fadbb49bcae69bf713adf4, type: 3}
+  player: {fileID: 0}
   footHitboxObj: {fileID: 5975905567524837893}
   leftSwordHitboxObj: {fileID: 5975905568471096775}
   rightSwordHitboxObj: {fileID: 5975905568368604893}
@@ -547,7 +547,6 @@ MonoBehaviour:
     type: 3}
   bossHasDied: 0
   moveSpeed: 1
-  slider: {fileID: 0}
 --- !u!1 &5975905567160681195
 GameObject:
   m_ObjectHideFlags: 0

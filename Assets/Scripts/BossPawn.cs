@@ -13,6 +13,9 @@ public class BossPawn : Pawn
 
     public Animator animator;
     public GameObject player;
+    public GameObject footHitboxObj;
+    public GameObject leftSwordHitboxObj;
+    public GameObject rightSwordHitboxObj;
     public GameObject spawnpoint;
     public GameObject flyingDrone;
     public GameObject groundDrone;
@@ -36,6 +39,7 @@ public class BossPawn : Pawn
     protected float startingHealth = 5000f;
     protected float currentHealth = 5000f;
     bool facingRight = false;
+    bool nextAttack = true;//to decide what melee attack is used.
     bool isAttacking = false;
     Vector3 theScale;
 
@@ -46,8 +50,11 @@ public class BossPawn : Pawn
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        //slider.minValue = 0;
-        //slider.maxValue = startingHealth;
+        footHitbox = footHitboxObj.GetComponent<Collider2D>();
+        leftSwordHitbox = leftSwordHitboxObj.GetComponent<Collider2D>();
+        rightSwordHitbox = rightSwordHitboxObj.GetComponent<Collider2D>();
+        slider.minValue = 0;
+        slider.maxValue = startingHealth;
         currentState = new States(stateWalking);
 
         currentState();
@@ -55,23 +62,25 @@ public class BossPawn : Pawn
 
     void Update()
     {
-        //slider.value = currentHealth;
+        slider.value = currentHealth;
         if (!bossHasDied)
         {
 
-            if (currentState == stateIdle && isCloseToPlayer())
+            if (currentState == stateIdle && isCloseToPlayer() && attackTime > 0)
             {
                 if (Time.time > attackTime + timerStart)
                 {
                     if (getDist() <= 1.4f)
                     {
                         currentState = new States(stateStomp);
-                     
+
+                        nextAttack = false;
                     }
                     else
                     {
                         currentState = new States(stateSwing);
-                       
+
+                        nextAttack = true;
                     }
 
 
@@ -118,20 +127,15 @@ public class BossPawn : Pawn
 
     void stateIdle()//plays idle anim and stops any other actions
     {
-        if (isAttacking == false)
+        animatorReset();
+
+        rb.velocity = moveDirection * 0f;
+
+        if (!isCloseToPlayer())
         {
-            animatorReset();
+            currentState = new States(stateWalking);
 
-            rb.velocity = moveDirection * 0f;
-
-
-
-            if (!isCloseToPlayer())
-            {
-                currentState = new States(stateWalking);
-
-                currentState();
-            }
+            currentState();
         }
     }
 
@@ -166,9 +170,12 @@ public class BossPawn : Pawn
     {
         animator.SetBool("Stomp", true);
 
+        toggleHitboxes(1);
+
         isAttacking = true;
         yield return new WaitForSeconds(1.317f);
 
+        toggleHitboxes(1);
         isAttacking = false;
 
         yield return null;
@@ -185,10 +192,12 @@ public class BossPawn : Pawn
     {
         animator.SetBool("Swing", true);
 
+        toggleHitboxes(2);
 
         isAttacking = true;
         yield return new WaitForSeconds(2.1f);
 
+        toggleHitboxes(2);
         isAttacking = false;
 
         yield return null;
@@ -370,5 +379,41 @@ public class BossPawn : Pawn
         currentState = new States(stateIdle);
     }
 
+    public void toggleHitboxes(int which = 0)//also disables any active hitboxes that shouldn't be there
+    {
+        if (which == 1 || footHitbox.enabled)
+        {
+            footHitbox.enabled = !footHitbox.enabled;
+        }
+        else if (which == 2 || leftSwordHitbox.enabled)
+        {
+            leftSwordHitbox.enabled = !leftSwordHitbox.enabled;
+        }
+        else if (which == 3 || rightSwordHitbox.enabled)
+        {
+            rightSwordHitbox.enabled = !rightSwordHitbox.enabled;
+        }
+        else
+        {
+            Debug.Log("BossPawn: Invalid input recived in toggleHitboxes");
+        }
+    }
+
+    public void toggleHitboxes2()//to be called via Invoke to disabe any active hitboxes
+    {
+        if (footHitbox.enabled)
+        {
+            footHitbox.enabled = !footHitbox.enabled;
+        }
+        else if (leftSwordHitbox.enabled)
+        {
+            leftSwordHitbox.enabled = !leftSwordHitbox.enabled;
+        }
+        else if (rightSwordHitbox.enabled)
+        {
+            rightSwordHitbox.enabled = !rightSwordHitbox.enabled;
+        }
+       
+    }
 }
 

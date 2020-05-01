@@ -107,7 +107,7 @@ MonoBehaviour:
   grenadePrefab: {fileID: 0}
   grenadeLeftPrefab: {fileID: 0}
   grenadeSpawnLoc: {fileID: 0}
-  hammerHitBox: {fileID: 0}
+  hammerHitBox: {fileID: 1262835229}
   Speed: 50
   facingRight: 0
   inAir: 0

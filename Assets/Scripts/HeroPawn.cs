@@ -20,7 +20,7 @@ public class HeroPawn : Pawn
     private bool ismAingInAir = false;
     public bool inAir = false;
     public Vector3 theScale;
-    public float jumpForce = 500f;
+    private float jumpForce = 6f;
 
     void Start()
     {

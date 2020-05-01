@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossPawn : Pawn
 {
@@ -42,6 +43,8 @@ public class BossPawn : Pawn
     bool isAttacking = false;
     Vector3 theScale;
 
+    public Slider slider;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +52,8 @@ public class BossPawn : Pawn
         footHitbox = footHitboxObj.GetComponent<Collider2D>();
         leftSwordHitbox = leftSwordHitboxObj.GetComponent<Collider2D>();
         rightSwordHitbox = rightSwordHitboxObj.GetComponent<Collider2D>();
-
+        slider.minValue = 0;
+        slider.maxValue = startingHealth;
         currentState = new States(stateWalking);
 
         currentState();
@@ -57,6 +61,7 @@ public class BossPawn : Pawn
 
     void Update()
     {
+        slider.value = currentHealth;
         if (!bossHasDied)
         {
 

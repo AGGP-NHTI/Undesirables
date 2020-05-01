@@ -134,6 +134,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1262835230, guid: 20c2741e65fadbb49bcae69bf713adf4, type: 3}
+      propertyPath: hammerHitBox
+      value: 
+      objectReference: {fileID: 1792940446}
     - target: {fileID: 1223243303117770904, guid: 20c2741e65fadbb49bcae69bf713adf4,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -212,7 +216,7 @@ PrefabInstance:
     - target: {fileID: 5827186624160289964, guid: 20c2741e65fadbb49bcae69bf713adf4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5827186624160289964, guid: 20c2741e65fadbb49bcae69bf713adf4,
         type: 3}
@@ -960,6 +964,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1792940446 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1262835229, guid: 20c2741e65fadbb49bcae69bf713adf4,
+    type: 3}
+  m_PrefabInstance: {fileID: 188607550}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2050257085
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,6 +1144,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174695247304648638, guid: 5e0a888039479274285cafa6034a412b,
+        type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e0a888039479274285cafa6034a412b, type: 3}

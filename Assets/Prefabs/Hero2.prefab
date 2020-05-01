@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 1262835228}
   - component: {fileID: 1262835229}
   - component: {fileID: 1262835230}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HammerHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}

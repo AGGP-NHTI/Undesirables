@@ -1373,7 +1373,7 @@ GameObject:
   - component: {fileID: 3068746932645334514}
   - component: {fileID: 3068746932645334513}
   - component: {fileID: 3068746932645334525}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Tank Drone (Final)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

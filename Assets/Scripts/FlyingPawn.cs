@@ -121,7 +121,7 @@ public class FlyingPawn : DronePawn
         yield return null;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void flyAttack(Collider2D collision)
     {
         if (collision.tag == "Player" && !inAttack)
         {

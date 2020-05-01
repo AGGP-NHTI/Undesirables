@@ -476,6 +476,7 @@ Transform:
   - {fileID: 5975905568700682673}
   - {fileID: 5975905566953491046}
   - {fileID: 1588284558}
+  - {fileID: 8721524400542301830}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -540,7 +541,7 @@ MonoBehaviour:
   leftSwordHitboxObj: {fileID: 5975905568471096775}
   rightSwordHitboxObj: {fileID: 5975905568368604893}
   spawnpoint: {fileID: 1588284557}
-  flyingDrone: {fileID: 5603839749379761557, guid: 63b9982f415f2ff49b86a32c21ee03d4,
+  flyingDrone: {fileID: 6260387573132616623, guid: 8c147ef77e998214bb29f3aea93125f9,
     type: 3}
   groundDrone: {fileID: 7594712079538438191, guid: 523e4d3ac2dcf6143b144bfc33d0e107,
     type: 3}
@@ -648,7 +649,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5975905567195624099}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -865,7 +866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5975905567497916547}
   - component: {fileID: 2027528301}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bone_16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -914,7 +915,7 @@ GameObject:
   - component: {fileID: 5975905567524837892}
   - component: {fileID: 1380232906}
   - component: {fileID: 1380232907}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bone_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1217,7 +1218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5975905568288568070}
   - component: {fileID: 2019279801}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bone_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1265,7 +1266,7 @@ GameObject:
   - component: {fileID: 5975905568368604892}
   - component: {fileID: 244350975}
   - component: {fileID: 244350976}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bone_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1391,7 +1392,7 @@ GameObject:
   - component: {fileID: 5975905568402338525}
   - component: {fileID: 1490088325}
   - component: {fileID: 1490088324}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1454,7 +1455,7 @@ GameObject:
   - component: {fileID: 5975905568437754595}
   - component: {fileID: 795053545}
   - component: {fileID: 795053544}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bone_19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1517,7 +1518,7 @@ GameObject:
   - component: {fileID: 5975905568471096774}
   - component: {fileID: 2014122044}
   - component: {fileID: 2014122045}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bone_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1714,7 +1715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5975905568711564354}
   - component: {fileID: 1923515132}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bone_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1752,3 +1753,33 @@ CapsuleCollider2D:
   m_Offset: {x: 0.031313058, y: 0.08693061}
   m_Size: {x: 1.59148, y: 0.522984}
   m_Direction: 1
+--- !u!1 &9102372097491601161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8721524400542301830}
+  m_Layer: 0
+  m_Name: DroneSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8721524400542301830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9102372097491601161}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.14, y: 4.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5975905566972516790}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

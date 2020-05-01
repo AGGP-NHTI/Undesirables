@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grenade : Actor
+public class GrenadeLeft : Actor
 {
 
     public float damageAmount = 50.0f;
@@ -12,14 +12,14 @@ public class Grenade : Actor
 
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();        
-        rb.velocity = (Vector2.up * movementSpeed) + (Vector2.right * movementSpeed);
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        rb.velocity = (Vector2.up * movementSpeed) + (Vector2.left * movementSpeed);
         Destroy(gameObject, lifetime);
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag != "Player")
+        if ((other.gameObject.tag != "Player") && (other.gameObject.tag != "ground"))
         {
             Actor OtherActor = other.gameObject.GetComponentInParent<Actor>();
             if (OtherActor)

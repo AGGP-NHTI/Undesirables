@@ -5,6 +5,7 @@ using UnityEngine;
 public class HammerDamage : HeroPawn
 {
     private float damageAmount = 100f;
+    
 
     void Start()
     {
@@ -17,6 +18,7 @@ public class HammerDamage : HeroPawn
         if (OtherActor)
         {
             OtherActor.TakeDamage(this, damageAmount, null, Owner);
+            hammerHitBox.enabled = false;
             
         }
     }

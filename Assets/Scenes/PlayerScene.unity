@@ -852,10 +852,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1262835227, guid: 20c2741e65fadbb49bcae69bf713adf4, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5827186624160289964, guid: 20c2741e65fadbb49bcae69bf713adf4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -915,11 +911,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hero2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7392128701739086386, guid: 20c2741e65fadbb49bcae69bf713adf4,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20c2741e65fadbb49bcae69bf713adf4, type: 3}

@@ -132,6 +132,20 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1126112807}
+    - target: {fileID: 1381399057, guid: be26980ea9be8b54491dc116c7639fef, type: 3}
+      propertyPath: spawnpoint
+      value: 
+      objectReference: {fileID: 1588284557}
+    - target: {fileID: 1381399057, guid: be26980ea9be8b54491dc116c7639fef, type: 3}
+      propertyPath: flyingDrone
+      value: 
+      objectReference: {fileID: 5603839749379761557, guid: 63b9982f415f2ff49b86a32c21ee03d4,
+        type: 3}
+    - target: {fileID: 1381399057, guid: be26980ea9be8b54491dc116c7639fef, type: 3}
+      propertyPath: groundDrone
+      value: 
+      objectReference: {fileID: 7594712079538438191, guid: 523e4d3ac2dcf6143b144bfc33d0e107,
+        type: 3}
     - target: {fileID: 5975905566972516788, guid: be26980ea9be8b54491dc116c7639fef,
         type: 3}
       propertyPath: m_Name

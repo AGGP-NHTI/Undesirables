@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1588284557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1588284558}
+  m_Layer: 0
+  m_Name: DroneSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1588284558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588284557}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.14, y: 4.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5975905566972516790}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5975905566680625133
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,6 +475,7 @@ Transform:
   - {fileID: 5975905568231705444}
   - {fileID: 5975905568700682673}
   - {fileID: 5975905566953491046}
+  - {fileID: 1588284558}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -508,6 +539,11 @@ MonoBehaviour:
   footHitboxObj: {fileID: 5975905567524837893}
   leftSwordHitboxObj: {fileID: 5975905568471096775}
   rightSwordHitboxObj: {fileID: 5975905568368604893}
+  spawnpoint: {fileID: 1588284557}
+  flyingDrone: {fileID: 5603839749379761557, guid: 63b9982f415f2ff49b86a32c21ee03d4,
+    type: 3}
+  groundDrone: {fileID: 7594712079538438191, guid: 523e4d3ac2dcf6143b144bfc33d0e107,
+    type: 3}
   bossHasDied: 0
   moveSpeed: 1
 --- !u!1 &5975905567160681195

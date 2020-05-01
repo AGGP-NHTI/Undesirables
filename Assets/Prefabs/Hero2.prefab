@@ -105,6 +105,7 @@ MonoBehaviour:
   IsSpectator: 1
   Health: 100
   grenadePrefab: {fileID: 0}
+  grenadeLeftPrefab: {fileID: 0}
   grenadeSpawnLoc: {fileID: 0}
   hammerHitBox: {fileID: 0}
   Speed: 50
@@ -1888,6 +1889,8 @@ MonoBehaviour:
   IsSpectator: 1
   Health: 100
   grenadePrefab: {fileID: 7237384474512951766, guid: d910a354587e0ab4b8deecb3c7c86ab1,
+    type: 3}
+  grenadeLeftPrefab: {fileID: 5456565940200236776, guid: 9349808ab60d6dc409e19287addad520,
     type: 3}
   grenadeSpawnLoc: {fileID: 2141667700021864556}
   hammerHitBox: {fileID: 1262835229}

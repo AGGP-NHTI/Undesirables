@@ -15,6 +15,9 @@ public class BossPawn : Pawn
     public GameObject footHitboxObj;
     public GameObject leftSwordHitboxObj;
     public GameObject rightSwordHitboxObj;
+    public GameObject spawnpoint;
+    public GameObject flyingDrone;
+    public GameObject groundDrone;
     Collider2D footHitbox;
     Collider2D leftSwordHitbox;
     Collider2D rightSwordHitbox;
@@ -23,6 +26,8 @@ public class BossPawn : Pawn
 
     Vector2 moveDirection;
     public float moveSpeed = 5f;
+    float flyingDroneCount = 0f;
+    float groundDroneCount = 0f;
     float closeRange = 2f;
     float attackTime = 2f;
     float hitStunTime = 3f;
@@ -30,10 +35,11 @@ public class BossPawn : Pawn
     float missileTimer = 10f;//10 test num, raise to 20*
     float missileTimerStart = 0f;
     float timerStart = 0f;
-    protected float startingHealth = 500f;
-    protected float currentHealth = 500f;
+    protected float startingHealth = 5000f;
+    protected float currentHealth = 5000f;
     bool facingRight = false;
     bool nextAttack = true;//to decide what melee attack is used.
+    bool isAttacking = false;
     Vector3 theScale;
 
     // Start is called before the first frame update
@@ -58,7 +64,7 @@ public class BossPawn : Pawn
             {
                 if (Time.time > attackTime + timerStart)
                 {
-                    if (nextAttack)
+                    if (getDist() <= 1.4f)
                     {
                         currentState = new States(stateStomp);
 
@@ -79,7 +85,7 @@ public class BossPawn : Pawn
 
                 }
             }
-            else if (currentState == stateStomp || currentState == stateSwing || currentState == stateIdle)//transition back to walking if player is no longer close
+            else if (currentState == stateStomp || currentState == stateSwing || currentState == stateIdle || currentState == stateMissileFire && !isAttacking)//transition back to walking if player is no longer close
             {
                 if (isCloseToPlayer())
                 {
@@ -150,23 +156,44 @@ public class BossPawn : Pawn
     void stateStomp()
     {
         animatorReset();
+        StartCoroutine(stomp());
+    }
 
+    IEnumerator stomp()
+    {
         animator.SetBool("Stomp", true);
 
         toggleHitboxes(1);
 
-        Invoke("toggleHitboxes2", 1.5f);
+        isAttacking = true;
+        yield return new WaitForSeconds(1.317f);
+
+        toggleHitboxes(1);
+        isAttacking = false;
+
+        yield return null;
     }
 
     void stateSwing()
     {
         animatorReset();
 
+        StartCoroutine(swing());
+    }
+
+    IEnumerator swing()
+    {
         animator.SetBool("Swing", true);
 
         toggleHitboxes(2);
 
-        Invoke("toggleHitboxes2", 2.5f);
+        isAttacking = true;
+        yield return new WaitForSeconds(2.1f);
+
+        toggleHitboxes(2);
+        isAttacking = false;
+
+        yield return null;
     }
 
     void stateHitstun()//can be staggered from movement patterns
@@ -175,6 +202,7 @@ public class BossPawn : Pawn
         animator.SetBool("hasTakenDmg", true);
 
         Invoke("setStatetoIdle", hitStunTime);//how long he is stunned before returning to idle
+        animatorReset();
     }
 
     void stateCriticalHitstun()//can be staggered from anything
@@ -183,18 +211,43 @@ public class BossPawn : Pawn
         animator.SetBool("hasTakenCrit", true);
 
 
+        Invoke("animatorReset", 2f);//return to idle animation not state//2 = hitstun anim runtime
         Invoke("setStatetoIdle", criticalHitStunTime);//how long he is stunned before returning to idle
     }
 
     void stateMissileFire()
     {
         animatorReset();
+
+        StartCoroutine(SpawnObject());
+    }
+
+    IEnumerator SpawnObject()//if there is room, spawns a drone of the right kind otherwise fires a missile and makes room for more drones
+    {
         animator.SetBool("ShootMissile", true);
 
         rb.velocity = moveDirection * 0f;
 
+        yield return new WaitForSeconds(1.367f);
 
-        Invoke("setStatetoIdle", 3f);
+        if(flyingDroneCount < 2)
+        {
+            Factory(flyingDrone, spawnpoint.transform.position, spawnpoint.transform.rotation, controller);
+            flyingDroneCount++;
+        }
+        else if (groundDroneCount < 1)
+        {
+            Factory(groundDrone, spawnpoint.transform.position, spawnpoint.transform.rotation, controller);
+            groundDroneCount++;
+        }
+        else
+        {
+            //fire missile
+            groundDroneCount = 0f;
+            flyingDroneCount = 0f;
+        }
+
+        yield return null;
     }
 
     void stateDeath()
@@ -210,6 +263,8 @@ public class BossPawn : Pawn
     //
     //nonStateFunctions:
     //
+
+   
 
     float getDist()
     {
@@ -279,14 +334,18 @@ public class BossPawn : Pawn
             return false;
         }
 
-        if (Value >= 25 && Value < 50)
+        Actor tookCrit = Source.GetComponent<BossEyeHitbox>();
+
+        if (tookCrit)
         {
             currentState = new States(stateHitstun);
 
             currentState();
         }
 
-        if (Value >= 50)
+        tookCrit = Source.GetComponent<BossTopHitbox>();
+
+        if (tookCrit)
         {
             currentState = new States(stateCriticalHitstun);
 

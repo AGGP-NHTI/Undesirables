@@ -2,25 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossEyeHitbox : Actor
+public class BossTopHitbox : Actor
 {
     public GameObject Boss;
-    float damageAmount = 10f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    float damageAmount = 150f;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        HeroPawn player = other.gameObject.GetComponent<HeroPawn>();
+        HammerDamage player = other.gameObject.GetComponent<HammerDamage>();
 
-        if(player)
+        if (player)
         {
             Boss.GetComponent<BossPawn>().TakeDamage(this, damageAmount, null, Owner);
-            Debug.Log(Owner);
+
         }
     }
 }

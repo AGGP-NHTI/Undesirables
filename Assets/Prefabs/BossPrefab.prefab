@@ -102,7 +102,7 @@ MonoBehaviour:
   - {fileID: 5975905568437754595}
   m_Bounds:
     m_Center: {x: -0.000000059604645, y: -0.00000044703484, z: 0}
-    m_Extent: {x: 0.6500001, y: 0.27499992, z: 0}
+    m_Extent: {x: 0.65, y: 0.27499992, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905566758009260
 GameObject:
@@ -113,7 +113,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5975905566758009263}
-  - component: {fileID: 2146664365}
   m_Layer: 0
   m_Name: bone_14
   m_TagString: Untagged
@@ -136,22 +135,6 @@ Transform:
   m_Father: {fileID: 5975905568387435588}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &2146664365
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5975905566758009260}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.28492096, y: -0.06608784}
-  m_Size: {x: 0.94259536, y: 0.48371518}
-  m_Direction: 1
 --- !u!1 &5975905566801173539
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,8 +236,8 @@ MonoBehaviour:
   - {fileID: 5975905567195624099}
   - {fileID: 5975905568402338525}
   m_Bounds:
-    m_Center: {x: 0.0015448034, y: -0.00000047683716, z: 0}
-    m_Extent: {x: 0.49845505, y: 0.5550002, z: 0}
+    m_Center: {x: 0.001544863, y: -0.00000047683716, z: 0}
+    m_Extent: {x: 0.49845508, y: 0.5550002, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905566924805023
 GameObject:
@@ -421,7 +404,7 @@ MonoBehaviour:
   - {fileID: 5975905568387435588}
   - {fileID: 5975905568288568070}
   m_Bounds:
-    m_Center: {x: 0.001995325, y: 0.05410993, z: 0}
+    m_Center: {x: 0.0019954443, y: 0.05410993, z: 0}
     m_Extent: {x: 1.388005, y: 1.1591105, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905566972516788
@@ -496,7 +479,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
@@ -526,7 +509,7 @@ MonoBehaviour:
   leftSwordHitboxObj: {fileID: 5975905568471096775}
   rightSwordHitboxObj: {fileID: 5975905568368604893}
   bossHasDied: 0
-  moveSpeed: 5
+  moveSpeed: 1
 --- !u!1 &5975905567160681195
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +534,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5975905567160681195}
   m_LocalRotation: {x: 0, y: 0, z: -0.24772164, w: 0.9688313}
-  m_LocalPosition: {x: 0.63234735, y: -0.011597812, z: 0}
+  m_LocalPosition: {x: 0.6172533, y: -0.0036424994, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5975905568471096774}
@@ -598,7 +581,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5975905567194570678}
-  - component: {fileID: 630520474}
   m_Layer: 0
   m_Name: bone_10
   m_TagString: Untagged
@@ -621,22 +603,6 @@ Transform:
   m_Father: {fileID: 5975905568387435588}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 827.683}
---- !u!70 &630520474
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5975905567194570679}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.37199417, y: 0.031597637}
-  m_Size: {x: 0.95345485, y: 0.4859046}
-  m_Direction: 1
 --- !u!1 &5975905567195624096
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,7 +612,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5975905567195624099}
-  - component: {fileID: 1837130070}
   m_Layer: 0
   m_Name: bone_2
   m_TagString: Untagged
@@ -670,22 +635,6 @@ Transform:
   m_Father: {fileID: 5975905568387435588}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1837130070
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5975905567195624096}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.6791739, y: -0.031066509}
-  serializedVersion: 2
-  m_Radius: 0.8768244
 --- !u!1 &5975905567375698783
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,7 +769,7 @@ MonoBehaviour:
   - {fileID: 5975905567497916547}
   - {fileID: 5975905567474844328}
   m_Bounds:
-    m_Center: {x: -0.12682456, y: -0.0045760274, z: 0}
+    m_Center: {x: -0.12682468, y: -0.0045760274, z: 0}
     m_Extent: {x: 0.57817525, y: 0.8604257, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905567474844329
@@ -832,6 +781,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5975905567474844328}
+  - component: {fileID: 717248697}
   m_Layer: 0
   m_Name: bone_17
   m_TagString: Untagged
@@ -853,6 +803,22 @@ Transform:
   m_Father: {fileID: 5975905567497916547}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &717248697
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975905567474844329}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.060001507, y: 0.16421457}
+  serializedVersion: 2
+  m_Radius: 0.018965319
 --- !u!1 &5975905567497916544
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,11 +861,11 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09939298, y: 0.013701808}
-  m_Size: {x: 1.4190773, y: 0.4567865}
+  m_Offset: {x: -0.009230848, y: -0.0439897}
+  m_Size: {x: 1.6363248, y: 0.5721697}
   m_Direction: 1
 --- !u!1 &5975905567524837893
 GameObject:
@@ -963,7 +929,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoresDamage: 1
   LogDamageEvents: 1
-  BossObj: {fileID: 5975905566972516788}
 --- !u!1 &5975905567750229473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,8 +1030,8 @@ MonoBehaviour:
   - {fileID: 5975905568559361285}
   - {fileID: 5975905568387435588}
   m_Bounds:
-    m_Center: {x: 0.053589463, y: -0.063218236, z: 0}
-    m_Extent: {x: 0.9335896, y: 1.3784121, z: 0}
+    m_Center: {x: 0.05359, y: -0.05042255, z: 0}
+    m_Extent: {x: 0.9335902, y: 1.3314921, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905568032717615
 GameObject:
@@ -1215,9 +1180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5975905568288568070}
-  - component: {fileID: 2019279800}
   - component: {fileID: 2019279801}
-  - component: {fileID: 2019279802}
   m_Layer: 0
   m_Name: bone_18
   m_TagString: Untagged
@@ -1239,22 +1202,6 @@ Transform:
   m_Father: {fileID: 5975905567195624099}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &2019279800
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5975905568288568071}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 1.0713919, y: -0.99263495}
-  serializedVersion: 2
-  m_Radius: 0.1870747
 --- !u!58 &2019279801
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1271,32 +1218,6 @@ CircleCollider2D:
   m_Offset: {x: 0.891706, y: -0.15869}
   serializedVersion: 2
   m_Radius: 1.1193719
---- !u!61 &2019279802
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5975905568288568071}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.127278, y: -0.03393072}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.745444, y: 1.2709166}
-  m_EdgeRadius: 0
 --- !u!1 &5975905568368604893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,8 +1280,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoresDamage: 1
   LogDamageEvents: 1
-  isLeft: 0
-  BossObj: {fileID: 5975905566972516788}
 --- !u!1 &5975905568387435589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,6 +1289,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5975905568387435588}
+  - component: {fileID: 969584615}
   m_Layer: 0
   m_Name: bone_1
   m_TagString: Untagged
@@ -1398,6 +1318,32 @@ Transform:
   m_Father: {fileID: 5975905566972516790}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &969584615
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975905568387435589}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.11751059, y: 0.0735265}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.25849864, y: 0.86906934}
+  m_EdgeRadius: 0
 --- !u!1 &5975905568402338522
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,6 +1353,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5975905568402338525}
+  - component: {fileID: 1490088325}
+  - component: {fileID: 1490088324}
   m_Layer: 0
   m_Name: bone_3
   m_TagString: Untagged
@@ -1428,6 +1376,37 @@ Transform:
   m_Father: {fileID: 5975905567195624099}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1490088325
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975905568402338522}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.0520242, y: 0.7552274}
+  serializedVersion: 2
+  m_Radius: 0.10722742
+--- !u!114 &1490088324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975905568402338522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05fc6b3678f08734bb1fcdee0e944a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IgnoresDamage: 0
+  LogDamageEvents: 1
+  Boss: {fileID: 5975905566972516788}
 --- !u!1 &5975905568437754592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,6 +1416,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5975905568437754595}
+  - component: {fileID: 795053545}
+  - component: {fileID: 795053544}
   m_Layer: 0
   m_Name: bone_19
   m_TagString: Untagged
@@ -1458,6 +1439,37 @@ Transform:
   m_Father: {fileID: 5975905568387435588}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &795053545
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975905568437754592}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.1023477, y: 1.4229813}
+  serializedVersion: 2
+  m_Radius: 0.22429258
+--- !u!114 &795053544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975905568437754592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e7a827c070ad54893e9aa66a75f1ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IgnoresDamage: 0
+  LogDamageEvents: 1
+  Boss: {fileID: 0}
 --- !u!1 &5975905568471096775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,7 +1496,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5975905568471096775}
   m_LocalRotation: {x: 0, y: 0, z: -0.043278527, w: 0.9990631}
-  m_LocalPosition: {x: 0.5233286, y: 0.009844791, z: 0}
+  m_LocalPosition: {x: 0.44669327, y: 0.00011764839, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5975905567160681194}
@@ -1497,14 +1509,14 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5975905568471096775}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.6172799, y: 0.04472236}
-  m_Size: {x: 1.3532026, y: 0.23732138}
+  m_Offset: {x: 0.7991262, y: 0.044722598}
+  m_Size: {x: 1.3592174, y: 0.23732102}
   m_Direction: 1
 --- !u!114 &2014122045
 MonoBehaviour:
@@ -1520,8 +1532,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoresDamage: 1
   LogDamageEvents: 1
-  isLeft: 1
-  BossObj: {fileID: 5975905566972516788}
 --- !u!1 &5975905568559361282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,7 +1556,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5975905568559361282}
   m_LocalRotation: {x: 0, y: 0, z: -0.97755945, w: 0.21065989}
-  m_LocalPosition: {x: 1.3876381, y: -0.90964454, z: 0}
+  m_LocalPosition: {x: 1.35306, y: -0.9160941, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5975905567160681194}
@@ -1655,7 +1665,7 @@ MonoBehaviour:
   - {fileID: 5975905568711564354}
   - {fileID: 5975905567524837892}
   m_Bounds:
-    m_Center: {x: -0.01042515, y: 0.00052309036, z: 0}
+    m_Center: {x: -0.010425031, y: 0.00052309036, z: 0}
     m_Extent: {x: 0.57477003, y: 0.85487247, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905568711564355
@@ -1700,9 +1710,9 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1802834, y: 0.025212778}
-  m_Size: {x: 1.2935404, y: 0.39954808}
+  m_Offset: {x: 0.031313058, y: 0.08693061}
+  m_Size: {x: 1.59148, y: 0.522984}
   m_Direction: 1

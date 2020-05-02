@@ -22,7 +22,7 @@ public class HeroPawn : Pawn
     private bool isPlayerDead;
     public bool inAir = false;
     public Vector3 theScale;
-    public float jumpForce = 500f;
+    private float jumpForce = 6f;
     public Canvas playerHealth;
     public Slider sliderHealth;
 

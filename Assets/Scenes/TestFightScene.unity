@@ -332,6 +332,14 @@ PrefabInstance:
       propertyPath: hammerHitBox
       value: 
       objectReference: {fileID: 160441898}
+    - target: {fileID: 1262835230, guid: 20c2741e65fadbb49bcae69bf713adf4, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 151606437}
+    - target: {fileID: 1262835230, guid: 20c2741e65fadbb49bcae69bf713adf4, type: 3}
+      propertyPath: sliderHealth
+      value: 
+      objectReference: {fileID: 594751904}
     - target: {fileID: 2056174286, guid: 20c2741e65fadbb49bcae69bf713adf4, type: 3}
       propertyPath: sliderHealth
       value: 
@@ -1868,8 +1876,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: BOSS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d11138655bca747a6a7ba626dfb486, type: 2}
+  m_sharedMaterial: {fileID: -5329521008500337626, guid: 24d11138655bca747a6a7ba626dfb486,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2023,8 +2032,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'HP:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d11138655bca747a6a7ba626dfb486, type: 2}
+  m_sharedMaterial: {fileID: -5329521008500337626, guid: 24d11138655bca747a6a7ba626dfb486,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

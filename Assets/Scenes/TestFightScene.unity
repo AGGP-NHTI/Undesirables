@@ -322,14 +322,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1262835230, guid: 20c2741e65fadbb49bcae69bf713adf4, type: 3}
-      propertyPath: playerHealth
-      value: 
-      objectReference: {fileID: 151606437}
-    - target: {fileID: 1262835230, guid: 20c2741e65fadbb49bcae69bf713adf4, type: 3}
-      propertyPath: sliderHealth
-      value: 
-      objectReference: {fileID: 594751904}
     - target: {fileID: 2056174286, guid: 20c2741e65fadbb49bcae69bf713adf4, type: 3}
       propertyPath: playerHealth
       value: 

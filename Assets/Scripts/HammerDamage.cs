@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HammerDamage : HeroPawn
+public class HammerDamage : Pawn
 {
     private float damageAmount = 100f;
-    
+    public GameObject sparkLoc;
+    public GameObject sparks;
+    public Collider2D hammerHitBox;
+
 
     void Start()
     {
@@ -17,6 +20,7 @@ public class HammerDamage : HeroPawn
         Actor OtherActor = other.gameObject.GetComponentInParent<Actor>();
         if (OtherActor)
         {
+            Instantiate(sparks, sparkLoc.transform.position, Quaternion.identity);
             OtherActor.TakeDamage(this, damageAmount, null, Owner);
             hammerHitBox.enabled = false;
             

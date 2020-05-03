@@ -36,7 +36,7 @@ public class HeroPawn : Pawn
         sliderHealth.maxValue = Health;
     }
 
-    private void Update()
+    void Update()
     {
         sliderHealth.value = Health;
         if (ismAing)
@@ -233,10 +233,11 @@ public class HeroPawn : Pawn
         if (Health <= 0f)
         {
             isPlayerDead = true;
+            rb.velocity = Vector2.zero;
             gameObject.GetComponent<Animator>().SetBool("isHeroDead", true);
             gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
             gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
-            //Destroy(gameObject, 5f);
+            Destroy(gameObject, 5f);
             Debug.Log(gameObject.name + " has died!");
             IgnoresDamage = true;
             //Game.Self.PlayerDied(this, Source, EventInfo, Instigator);

@@ -14,12 +14,14 @@ public class HeroPawn : Pawn
     public float Speed = 50f;
     private float attackCoolDwn = 0.35f;
     private float ProjattackCoolDwn = 0.3f;
+    private float isHurtTime = 0.1f;
     public bool facingRight;
     private bool ismAing = false;
     private bool ispAing = false;
     private bool ispAingInAir = false;
     private bool ismAingInAir = false;
     private bool isPlayerDead;
+    private bool isHurt = false;
     public bool inAir = false;
     public Vector3 theScale;
     private float jumpForce = 6f;
@@ -39,6 +41,19 @@ public class HeroPawn : Pawn
     void Update()
     {
         sliderHealth.value = Health;
+
+        if (isHurt)
+        {
+            if (isHurtTime <= 0f)
+            {
+                isHurt = false;
+                isHurtTime = 0.1f;
+            }
+            else
+            {
+                isHurtTime = isHurtTime - Time.deltaTime;
+            }
+        }
         if (ismAing)
         {
             if (attackCoolDwn > 0f)
@@ -226,6 +241,7 @@ public class HeroPawn : Pawn
 
     protected override bool ProcessDamage(Actor Source, float Value, DamageEventInfo EventInfo, Controller Instigator)
     {
+        isHurt = true;
         LOG("Took Damage");
         Controller controller = GetController();
         Health = Health - Value;

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7237384474512951764}
   - component: {fileID: 7237384474512951765}
   - component: {fileID: 7237384474512951594}
-  - component: {fileID: 7237384474512951595}
+  - component: {fileID: 258126171088484605}
   - component: {fileID: 7237384474512951593}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Grenade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &7237384474512951595
+--- !u!58 &258126171088484605
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,9 +118,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.015833369, y: -0.12893227}
+  m_Offset: {x: -0.013408076, y: -0.12737878}
   serializedVersion: 2
-  m_Radius: 0.10189608
+  m_Radius: 0.12456777
 --- !u!114 &7237384474512951593
 MonoBehaviour:
   m_ObjectHideFlags: 0

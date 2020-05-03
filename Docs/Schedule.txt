@@ -29,7 +29,7 @@ Fight UI: Health Bars, Ammo (If Implemented)
 Menus and Screens: Main Menu, Victory, Defeat Screen
 Effects and Assets: Damage Effects, walls;
 
-Ryan: Tank and drone colliders, Fight UI, Platforms
+Ryan: Tank and drone colliders, Fight UI
 Matthew: Drone Spawning, Menus and Screens
 Wes: Grenade Explosion, Player Jump, Effects and Assets
 

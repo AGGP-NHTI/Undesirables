@@ -4,31 +4,22 @@ using UnityEngine;
 
 public class Grenade : Actor
 {
-    public GameObject explosion;
+
     public float damageAmount = 50.0f;
     public float movementSpeed = 5f;
-    public float lifetime = 2.5f;
+    public float lifetime = 2f;
     public Rigidbody2D rb;
 
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();        
         rb.velocity = (Vector2.up * movementSpeed) + (Vector2.right * movementSpeed);
-    }
-
-    private void Update()
-    {
-        lifetime = lifetime - Time.deltaTime;
-        if (lifetime <= 0f)
-        {
-            Instantiate(explosion, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-        }
+        Destroy(gameObject, lifetime);
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if ((other.gameObject.tag != "Player") && (other.gameObject.tag != "ground"))
+        if (other.gameObject.tag != "Player")
         {
             Actor OtherActor = other.gameObject.GetComponentInParent<Actor>();
             if (OtherActor)
@@ -41,7 +32,6 @@ public class Grenade : Actor
 
     public virtual void OnDeath()
     {
-        Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

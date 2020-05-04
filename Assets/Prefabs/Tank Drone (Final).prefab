@@ -1486,7 +1486,7 @@ MonoBehaviour:
   IgnoresDamage: 0
   LogDamageEvents: 1
   IsSpectator: 0
-  health: 300
+  health: 100
   target: {fileID: 7392128701739086386, guid: 20c2741e65fadbb49bcae69bf713adf4, type: 3}
   turret: {fileID: 6167362698086384428}
   projectile: {fileID: 31698096816373781, guid: aacaab84d5eec944999f20f2b8e9b3fe,

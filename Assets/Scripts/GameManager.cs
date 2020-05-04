@@ -19,18 +19,18 @@ public class GameManager : MonoBehaviour
     
     void Update()
     {
-        /*if(Boss.isDead)
+        if (Boss.GetComponent<BossPawn>().isDead)
         {
-            winCanvas.setActive(true);
+            winCanvas.SetActive(true);
         }
-        else if(Player.isDead)
+        else if(Player.GetComponent<HeroPawn>().isDead)
         {
             loseCanvas.SetActive(true);
-        }*/
+        }
     }
 
-    void getScene()
+    void returnToMainMenu()
     {
-        //SceneManager.GetActiveScene().name;
+        
     }
 }

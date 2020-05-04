@@ -174,6 +174,7 @@ public class FlyingPawn : DronePawn
         health -= Value;
         if (health <= 0)
         {
+            Source.GetComponentInParent<HeroPawn>().numOfGrenades++;
             IgnoresDamage = true;
             if (_controller)
             {

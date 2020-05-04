@@ -36,7 +36,7 @@ public class Platform : MonoBehaviour
         isInMotion = true;
         for (int i = 0; i < 20; i++)
         {
-            rb.velocity = new Vector2(0, 0.2f);
+            gameObject.transform.Translate(0, 0.2f, 0);
         }
         isInMotion = false;
         goingUp = false;
@@ -47,7 +47,7 @@ public class Platform : MonoBehaviour
         isInMotion = true;
         for (int i = 0; i < 20; i++)
         {
-            rb.velocity = new Vector2(0, -0.2f);
+            gameObject.transform.Translate(0, -0.2f, 0);
         }
         isInMotion = false;
         goingUp = true;

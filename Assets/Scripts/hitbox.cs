@@ -8,7 +8,7 @@ public class hitbox : Actor
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Actor OtherActor = collision.gameObject.GetComponentInParent<Actor>();
+        HeroPawn OtherActor = collision.gameObject.GetComponentInParent<HeroPawn>();
         if (OtherActor)
         {
             OtherActor.TakeDamage(this, damageAmount, null, Owner);

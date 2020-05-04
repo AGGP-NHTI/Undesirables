@@ -17,6 +17,7 @@ public class TankPawn : DronePawn
     bool isDead;
     public Animator tankAn;
     bool facingLeft;
+    AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class TankPawn : DronePawn
         rb = gameObject.GetComponent<Rigidbody2D>();
         states = TankStates.IDLE;
         isDead = false;
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -113,6 +115,7 @@ public class TankPawn : DronePawn
         for (int i = 0; i < 3; i++)
         {
             Factory(projectile, spawnpoint.transform.position, spawnpoint.transform.rotation, controller);
+            audio.Play();
             yield return new WaitForSeconds(0.25f);
         }
 

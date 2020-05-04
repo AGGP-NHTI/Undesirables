@@ -1884,8 +1884,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: BOSS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 640f76bc0966213459ca543a0185f250, type: 2}
-  m_sharedMaterial: {fileID: 854213140070204404, guid: 640f76bc0966213459ca543a0185f250,
+  m_fontAsset: {fileID: 11400000, guid: 24d11138655bca747a6a7ba626dfb486, type: 2}
+  m_sharedMaterial: {fileID: -5329521008500337626, guid: 24d11138655bca747a6a7ba626dfb486,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2040,8 +2040,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'HP:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 640f76bc0966213459ca543a0185f250, type: 2}
-  m_sharedMaterial: {fileID: 854213140070204404, guid: 640f76bc0966213459ca543a0185f250,
+  m_fontAsset: {fileID: 11400000, guid: 24d11138655bca747a6a7ba626dfb486, type: 2}
+  m_sharedMaterial: {fileID: -5329521008500337626, guid: 24d11138655bca747a6a7ba626dfb486,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

@@ -23,17 +23,19 @@ public class FlyingPawn : DronePawn
     bool facingLeft;
     bool inAttack;
     bool isFalling;
+    AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
     {
         hitbox.SetActive(false);
+        audio = GetComponent<AudioSource>();
         rb = gameObject.GetComponent<Rigidbody2D>();
         states = FlyingStates.IDLE;
         isDead = false;
         facingLeft = true;
         isFalling = true;
-        flyHeight = Random.Range(.75f, 6.0f);
+        flyHeight = Random.Range(2f, 6.0f);
         colbox.enabled = true;
     }
 
@@ -112,6 +114,7 @@ public class FlyingPawn : DronePawn
         for (int i = 0; i < 2; i++)
         {
             Factory(projectile, spawnPoint.transform.position, spawnPoint.transform.rotation, controller);
+            audio.Play();
             yield return new WaitForSeconds(0.10f);
         }
         yield return new WaitForSeconds(0.30f);

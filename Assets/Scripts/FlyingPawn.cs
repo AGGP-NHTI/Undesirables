@@ -162,6 +162,7 @@ public class FlyingPawn : DronePawn
     IEnumerator deathAn()
     {
         flyAn.SetTrigger("IsDying");
+        isDead = true;
         isFalling = true;
         yield return new WaitForSeconds(5f);
         Destroy(gameObject);

@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &16092079 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9102372097491601161, guid: be26980ea9be8b54491dc116c7639fef,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043365305}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &22668466
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +138,7 @@ GameObject:
   - component: {fileID: 22668467}
   - component: {fileID: 22668468}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: BossHP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,7 +234,7 @@ GameObject:
   - component: {fileID: 151606436}
   - component: {fileID: 151606435}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: Player Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -465,6 +471,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209579259}
   m_CullTransparentMesh: 0
+--- !u!1 &331103644 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3739492007015584925, guid: be26980ea9be8b54491dc116c7639fef,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043365305}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &494999340
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +526,7 @@ GameObject:
   - component: {fileID: 565680596}
   - component: {fileID: 565680595}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Boss Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2049,7 +2061,25 @@ PrefabInstance:
     - target: {fileID: 1381399057, guid: be26980ea9be8b54491dc116c7639fef, type: 3}
       propertyPath: bossHealthUI
       value: 
-      objectReference: {fileID: 151606437}
+      objectReference: {fileID: 565680597}
+    - target: {fileID: 1381399057, guid: be26980ea9be8b54491dc116c7639fef, type: 3}
+      propertyPath: spawnpoint
+      value: 
+      objectReference: {fileID: 16092079}
+    - target: {fileID: 1381399057, guid: be26980ea9be8b54491dc116c7639fef, type: 3}
+      propertyPath: grondSpawnpoint
+      value: 
+      objectReference: {fileID: 331103644}
+    - target: {fileID: 1381399057, guid: be26980ea9be8b54491dc116c7639fef, type: 3}
+      propertyPath: flyingDrone
+      value: 
+      objectReference: {fileID: 6260387573132616623, guid: 8c147ef77e998214bb29f3aea93125f9,
+        type: 3}
+    - target: {fileID: 1381399057, guid: be26980ea9be8b54491dc116c7639fef, type: 3}
+      propertyPath: groundDrone
+      value: 
+      objectReference: {fileID: 7594712079538438191, guid: 523e4d3ac2dcf6143b144bfc33d0e107,
+        type: 3}
     - target: {fileID: 5975905566972516788, guid: be26980ea9be8b54491dc116c7639fef,
         type: 3}
       propertyPath: m_Name
@@ -2058,7 +2088,7 @@ PrefabInstance:
     - target: {fileID: 5975905566972516788, guid: be26980ea9be8b54491dc116c7639fef,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5975905566972516790, guid: be26980ea9be8b54491dc116c7639fef,
         type: 3}

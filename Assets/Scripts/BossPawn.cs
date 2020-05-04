@@ -35,7 +35,6 @@ public class BossPawn : Pawn
     protected float startingHealth = 5000f;
     protected float currentHealth = 5000f;
     bool facingRight = false;
-    bool nextAttack = true;//to decide what melee attack is used.
     bool isAttacking = false;
     Vector3 theScale;
 
@@ -67,13 +66,11 @@ public class BossPawn : Pawn
                     {
                         currentState = new States(stateStomp);
 
-                        nextAttack = false;
                     }
                     else
                     {
                         currentState = new States(stateSwing);
 
-                        nextAttack = true;
                     }
 
 

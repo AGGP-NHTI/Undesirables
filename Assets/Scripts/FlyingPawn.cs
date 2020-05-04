@@ -17,7 +17,7 @@ public class FlyingPawn : DronePawn
     public float flyHeight;
     float timer = 5.0f;
     int nextState;
-    bool isDead;
+    public bool isDead;
     public Animator flyAn;
     public GameObject ground;
     bool facingLeft;

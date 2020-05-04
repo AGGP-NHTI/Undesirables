@@ -4,9 +4,19 @@ using UnityEngine;
 
 public class droneAttackScript : MonoBehaviour
 {
+
+    FlyingPawn parent;
+
+    private void Start()
+    {
+        parent = GetComponentInParent<FlyingPawn>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        FlyingPawn parent = GetComponentInParent<FlyingPawn>();
-        parent.flyAttack(collision);
+        if (!parent.isDead)
+        {
+            parent.flyAttack(collision);
+        }
     }
 }

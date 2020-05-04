@@ -301,7 +301,7 @@ public class HeroPawn : Pawn
         {
 
             isDead = true;
-
+            rb.velocity = new Vector2(0f, rb.velocity.y);
             isPlayerDead = true;
             gameObject.GetComponent<Animator>().SetBool("isHeroDead", true);
             gameObject.GetComponent<Rigidbody2D>().isKinematic = true;

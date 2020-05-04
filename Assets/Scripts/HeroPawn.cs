@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HeroPawn : Pawn
 {
+    public bool isDead = false;
+
     public float Health = 100.0f;
     public GameObject grenadePrefab;
     public GameObject grenadeLeftPrefab;
@@ -214,6 +216,7 @@ public class HeroPawn : Pawn
         Debug.Log(Health);
         if (Health <= 0f)
         {
+            isDead = true;
             Debug.Log(gameObject.name + " has died!");
             IgnoresDamage = true;
             //Game.Self.PlayerDied(this, Source, EventInfo, Instigator);

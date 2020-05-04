@@ -14,11 +14,10 @@ public class BossPawn : Pawn
     public Animator animator;
     public GameObject player;
     public GameObject spawnpoint;
+    public GameObject grondSpawnpoint;
     public GameObject flyingDrone;
     public GameObject groundDrone;
-    Collider2D footHitbox;
-    Collider2D leftSwordHitbox;
-    Collider2D rightSwordHitbox;
+    
 
     public bool bossHasDied = false;
 
@@ -81,7 +80,7 @@ public class BossPawn : Pawn
 
                 }
             }
-            else if (currentState == stateStomp || currentState == stateSwing || currentState == stateIdle || currentState == stateMissileFire && !isAttacking)//transition back to walking if player is no longer close
+            else if ((currentState == stateStomp && !isAttacking || currentState == stateSwing && !isAttacking || currentState == stateMissileFire && !isAttacking) || currentState == stateIdle )//transition back to walking if player is no longer close
             {
                 if (isCloseToPlayer())
                 {
@@ -117,7 +116,7 @@ public class BossPawn : Pawn
 
     void stateIdle()//plays idle anim and stops any other actions
     {
-        isAttacking = false;
+        
         animatorReset();
 
         rb.velocity = moveDirection * 0f;
@@ -166,8 +165,8 @@ public class BossPawn : Pawn
 
         isAttacking = true;
         yield return new WaitForSeconds(1.317f);
+        isAttacking = false;
 
-        
 
         yield return null;
     }
@@ -186,8 +185,8 @@ public class BossPawn : Pawn
 
         isAttacking = true;
         yield return new WaitForSeconds(2.1f);
+        isAttacking = false;
 
-        
 
         yield return null;
     }
@@ -224,7 +223,9 @@ public class BossPawn : Pawn
 
         rb.velocity = moveDirection * 0f;
 
+        isAttacking = true;
         yield return new WaitForSeconds(1.367f);
+        isAttacking = false;
 
         if(flyingDroneCount < 2)
         {
@@ -233,7 +234,7 @@ public class BossPawn : Pawn
         }
         else if (groundDroneCount < 1)
         {
-            Factory(groundDrone, spawnpoint.transform.position, spawnpoint.transform.rotation, controller);
+            Factory(groundDrone, grondSpawnpoint.transform.position, grondSpawnpoint.transform.rotation, controller);
             groundDroneCount++;
         }
         else

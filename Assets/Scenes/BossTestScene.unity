@@ -132,28 +132,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1126112807}
-    - target: {fileID: 1381399057, guid: be26980ea9be8b54491dc116c7639fef, type: 3}
-      propertyPath: spawnpoint
-      value: 
-      objectReference: {fileID: 1588284557}
-    - target: {fileID: 1381399057, guid: be26980ea9be8b54491dc116c7639fef, type: 3}
-      propertyPath: flyingDrone
-      value: 
-      objectReference: {fileID: 6260387573132616623, guid: 8c147ef77e998214bb29f3aea93125f9,
-        type: 3}
-    - target: {fileID: 1381399057, guid: be26980ea9be8b54491dc116c7639fef, type: 3}
-      propertyPath: groundDrone
-      value: 
-      objectReference: {fileID: 7594712079538438191, guid: 523e4d3ac2dcf6143b144bfc33d0e107,
-        type: 3}
-    - target: {fileID: 1588284558, guid: be26980ea9be8b54491dc116c7639fef, type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2014122044, guid: be26980ea9be8b54491dc116c7639fef, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5975905566972516788, guid: be26980ea9be8b54491dc116c7639fef,
         type: 3}
       propertyPath: m_Name
@@ -214,39 +192,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5975905567160681194, guid: be26980ea9be8b54491dc116c7639fef,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.6172533
-      objectReference: {fileID: 0}
-    - target: {fileID: 5975905567160681194, guid: be26980ea9be8b54491dc116c7639fef,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.0036424994
-      objectReference: {fileID: 0}
-    - target: {fileID: 5975905568471096774, guid: be26980ea9be8b54491dc116c7639fef,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.44669327
-      objectReference: {fileID: 0}
-    - target: {fileID: 5975905568471096774, guid: be26980ea9be8b54491dc116c7639fef,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.00011764839
-      objectReference: {fileID: 0}
-    - target: {fileID: 8721524400542301830, guid: be26980ea9be8b54491dc116c7639fef,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be26980ea9be8b54491dc116c7639fef, type: 3}
---- !u!4 &739573801 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5975905566972516790, guid: be26980ea9be8b54491dc116c7639fef,
-    type: 3}
-  m_PrefabInstance: {fileID: 237124539}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1126112807 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7392128701739086386, guid: 20c2741e65fadbb49bcae69bf713adf4,
@@ -730,36 +677,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1588284557
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1588284558}
-  m_Layer: 0
-  m_Name: DroneSpawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1588284558
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1588284557}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14, y: 4.01, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 739573801}
-  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1623356228
 GameObject:

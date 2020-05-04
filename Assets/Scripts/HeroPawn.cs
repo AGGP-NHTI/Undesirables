@@ -6,7 +6,7 @@ using TMPro;
 
 public class HeroPawn : Pawn
 {
-    public TextMeshPro textGrenade;
+    public TMP_Text textGrenade;
     public List<GameObject> Grenades = new List<GameObject>();
 
     public bool isDead = false;

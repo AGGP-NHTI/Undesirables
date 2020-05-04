@@ -1131,7 +1131,7 @@ MonoBehaviour:
   colbox: {fileID: 0}
   flyHeight: 3
   flyAn: {fileID: 8075923388064950854}
-  ground: {fileID: 0}
+  ground: {fileID: 6595505798455993755, guid: 22ce0f7a653ec2640be11457658c0ff0, type: 3}
 --- !u!1 &5802089466844543777
 GameObject:
   m_ObjectHideFlags: 0

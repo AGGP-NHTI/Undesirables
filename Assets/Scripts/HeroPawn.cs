@@ -301,11 +301,9 @@ public class HeroPawn : Pawn
         {
 
             isDead = true;
-            rb.velocity = new Vector2(0f, rb.velocity.y);
+            rb.velocity = new Vector2(0f, 0f);
             isPlayerDead = true;
             gameObject.GetComponent<Animator>().SetBool("isHeroDead", true);
-            gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
-            gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
             //Destroy(gameObject, 5f);
 
             Debug.Log(gameObject.name + " has died!");

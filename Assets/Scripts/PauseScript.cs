@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseScript : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PauseScript : MonoBehaviour
     public GameObject pauseMenuCanvas;
     public GameObject optionsMenuCanvas;
 
+    
 
     private void Awake()
     {
@@ -45,6 +47,10 @@ public class PauseScript : MonoBehaviour
         }
     }
 
+    string getScene()
+    {
+        return SceneManager.GetActiveScene().name;
+    }
 
     public void Resume()
     {
@@ -56,10 +62,14 @@ public class PauseScript : MonoBehaviour
 
     void Pause()
     {
-        pauseMenuObject.SetActive(true);
+        if(getScene() != "MainMenu")
+        {
+            pauseMenuObject.SetActive(true);
 
-        Time.timeScale = 0f;
-        GameIsPaused = true;
+            Time.timeScale = 0f;
+            GameIsPaused = true;
+        }
+        
     }
 
     public void EnterOptions()
@@ -74,4 +84,6 @@ public class PauseScript : MonoBehaviour
         pauseMenuCanvas.SetActive(true);
         optionsMenuCanvas.SetActive(false);
     }
+
+    
 }

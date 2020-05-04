@@ -15,6 +15,8 @@ public class BossPawn : Pawn
     public GameObject player;
     public GameObject spawnpoint;
     public GameObject grondSpawnpoint;
+    public GameObject missileSpawnpoint;
+    public GameObject missile;
     public GameObject flyingDrone;
     public GameObject groundDrone;
     
@@ -236,7 +238,7 @@ public class BossPawn : Pawn
         }
         else
         {
-            //fire missile
+            Factory(missile, missileSpawnpoint.transform.position, missileSpawnpoint.transform.rotation, controller);
             groundDroneCount = 0f;
             flyingDroneCount = 0f;
         }
@@ -314,7 +316,7 @@ public class BossPawn : Pawn
     {
         if (currentHealth <= 0)
         {
-            return false;
+            IgnoresDamage = true;
         }
 
         base.ProcessDamage(Source, Value, EventInfo, Instigator);

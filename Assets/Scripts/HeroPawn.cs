@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class HeroPawn : Pawn
 {
+    public List<GameObject> Grenades = new List<GameObject>();
 
     public bool isDead = false;
     public float Health = 100.0f;
@@ -38,11 +39,16 @@ public class HeroPawn : Pawn
     public bool inAir = false;
     public Vector3 theScale;
     private float jumpForce = 6.5f;
+    private int numOfGrenades = 0;
     public Canvas playerHealth;
     public Slider sliderHealth;
 
     void Start()
     {
+        Grenades.Add(grenadePrefab);
+        numOfGrenades++;
+        Grenades.Add(grenadePrefab);
+        numOfGrenades++;
         isPlayerDead = false;
         rb = gameObject.GetComponent<Rigidbody2D>();
         hammerHitBox.enabled = false;

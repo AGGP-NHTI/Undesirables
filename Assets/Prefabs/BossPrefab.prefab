@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1588284558}
   m_Layer: 0
-  m_Name: DroneSpawnPoint
+  m_Name: MissileSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588284557}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14, y: 4.01, z: 0}
+  m_LocalPosition: {x: -1.93, y: 3.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5975905566972516790}
@@ -571,12 +571,14 @@ MonoBehaviour:
   player: {fileID: 0}
   spawnpoint: {fileID: 9102372097491601161}
   grondSpawnpoint: {fileID: 3739492007015584925}
+  missileSpawnpoint: {fileID: 1588284557}
+  missile: {fileID: 1247057772799717870, guid: 80f1c2de1312d3749b81abaf38ea5157, type: 3}
   flyingDrone: {fileID: 6260387573132616623, guid: 8c147ef77e998214bb29f3aea93125f9,
     type: 3}
   groundDrone: {fileID: 7594712079538438191, guid: 523e4d3ac2dcf6143b144bfc33d0e107,
     type: 3}
   bossHasDied: 0
-  moveSpeed: 5
+  moveSpeed: 3
   bossHealthUI: {fileID: 0}
   slider: {fileID: 0}
 --- !u!82 &6998121293419282079

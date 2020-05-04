@@ -14,6 +14,10 @@ public class scrollscript : MonoBehaviour
     void Update()
     {
         gameObject.transform.Translate(Vector2.up * 0.004f);
+        if (Input.anyKey)
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 
     IEnumerator timer()

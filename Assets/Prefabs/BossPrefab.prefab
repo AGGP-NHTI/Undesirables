@@ -132,7 +132,7 @@ MonoBehaviour:
   - {fileID: 5975905568437754595}
   m_Bounds:
     m_Center: {x: -0.000000059604645, y: -0.00000044703484, z: 0}
-    m_Extent: {x: 0.65, y: 0.27499995, z: 0}
+    m_Extent: {x: 0.65, y: 0.27499992, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905566758009260
 GameObject:
@@ -267,7 +267,7 @@ MonoBehaviour:
   - {fileID: 5975905568402338525}
   m_Bounds:
     m_Center: {x: 0.001544863, y: -0.00000047683716, z: 0}
-    m_Extent: {x: 0.49845508, y: 0.55500007, z: 0}
+    m_Extent: {x: 0.49845508, y: 0.5550002, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905566924805023
 GameObject:
@@ -435,7 +435,7 @@ MonoBehaviour:
   - {fileID: 5975905568288568070}
   m_Bounds:
     m_Center: {x: 0.0019954443, y: 0.05410993, z: 0}
-    m_Extent: {x: 1.3880051, y: 1.1591104, z: 0}
+    m_Extent: {x: 1.388005, y: 1.1591105, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905566972516788
 GameObject:
@@ -511,7 +511,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 9999
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
@@ -536,7 +536,7 @@ MonoBehaviour:
   LogDamageEvents: 1
   IsSpectator: 0
   animator: {fileID: 5975905566972516791}
-  player: {fileID: 7392128701739086386, guid: 20c2741e65fadbb49bcae69bf713adf4, type: 3}
+  player: {fileID: 0}
   footHitboxObj: {fileID: 5975905567524837893}
   leftSwordHitboxObj: {fileID: 5975905568471096775}
   rightSwordHitboxObj: {fileID: 5975905568368604893}
@@ -547,7 +547,6 @@ MonoBehaviour:
     type: 3}
   bossHasDied: 0
   moveSpeed: 1
-  slider: {fileID: 0}
 --- !u!1 &5975905567160681195
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,8 +806,8 @@ MonoBehaviour:
   - {fileID: 5975905567497916547}
   - {fileID: 5975905567474844328}
   m_Bounds:
-    m_Center: {x: -0.12682462, y: -0.004576087, z: 0}
-    m_Extent: {x: 0.5781752, y: 0.8604257, z: 0}
+    m_Center: {x: -0.12682468, y: -0.0045760274, z: 0}
+    m_Extent: {x: 0.57817525, y: 0.8604257, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905567474844329
 GameObject:
@@ -1068,7 +1067,7 @@ MonoBehaviour:
   - {fileID: 5975905568559361285}
   - {fileID: 5975905568387435588}
   m_Bounds:
-    m_Center: {x: 0.05359006, y: -0.05042255, z: 0}
+    m_Center: {x: 0.05359, y: -0.05042255, z: 0}
     m_Extent: {x: 0.9335902, y: 1.3314921, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905568032717615
@@ -1206,7 +1205,7 @@ MonoBehaviour:
   - {fileID: 5975905568387435588}
   - {fileID: 5975905567195624099}
   m_Bounds:
-    m_Center: {x: -0.045000255, y: -0.0412606, z: 0}
+    m_Center: {x: -0.045000136, y: -0.0412606, z: 0}
     m_Extent: {x: 0.9300002, y: 1.3337405, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905568288568071
@@ -1703,8 +1702,8 @@ MonoBehaviour:
   - {fileID: 5975905568711564354}
   - {fileID: 5975905567524837892}
   m_Bounds:
-    m_Center: {x: -0.010425091, y: 0.00052309036, z: 0}
-    m_Extent: {x: 0.5747701, y: 0.8548726, z: 0}
+    m_Center: {x: -0.010425031, y: 0.00052309036, z: 0}
+    m_Extent: {x: 0.57477003, y: 0.85487247, z: 0}
   m_UseBatching: 1
 --- !u!1 &5975905568711564355
 GameObject:

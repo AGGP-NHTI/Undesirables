@@ -39,6 +39,19 @@ public class Grenade : Actor
         }
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if ((other.gameObject.tag != "Player") && (other.gameObject.tag != "ground"))
+        {
+            Actor OtherActor = other.gameObject.GetComponentInParent<Actor>();
+            if (OtherActor)
+            {
+                OtherActor.TakeDamage(this, damageAmount, null, Owner);
+            }
+            OnDeath();
+        }
+    }
+
     public virtual void OnDeath()
     {
         Instantiate(explosion, transform.position, Quaternion.identity);

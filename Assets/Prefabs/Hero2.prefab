@@ -1916,6 +1916,16 @@ MonoBehaviour:
   grenadeLeftPrefab: {fileID: 5456565940200236776, guid: 9349808ab60d6dc409e19287addad520,
     type: 3}
   grenadeSpawnLoc: {fileID: 2141667700021864556}
+  body: {fileID: 5943298670899990678}
+  head: {fileID: 1334174018630575545}
+  upperLeftArm: {fileID: 8906182219802501203}
+  upperRightArm: {fileID: 563908447064553322}
+  lowerRightArm: {fileID: 3920184916825894015}
+  lowerLeftArm: {fileID: 1337667324148086760}
+  lowerLeftLeg: {fileID: 1870546287366730721}
+  lowerRightLeg: {fileID: 6122224565863832585}
+  upperLeftLeg: {fileID: 4777653980328191536}
+  upperRightLeg: {fileID: 6996221820747462049}
   hammerHitBox: {fileID: 1262835229}
   Speed: 5
   facingRight: 0

@@ -12,7 +12,7 @@ public class Platform : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         goingUp = false;
-        isInMotion = true;
+        isInMotion = false;
     }
 
     // Update is called once per frame
@@ -36,7 +36,8 @@ public class Platform : MonoBehaviour
         isInMotion = true;
         for (int i = 0; i < 20; i++)
         {
-            transform.Translate(Vector2.up * 2.0f);
+            gameObject.transform.Translate(0, 0.01f, 0);
+            yield return new WaitForSeconds(0.2f);
         }
         isInMotion = false;
         goingUp = false;
@@ -47,7 +48,8 @@ public class Platform : MonoBehaviour
         isInMotion = true;
         for (int i = 0; i < 20; i++)
         {
-            transform.Translate(Vector2.up * -2.0f);
+            gameObject.transform.Translate(0, -0.01f, 0);
+            yield return new WaitForSeconds(0.2f);
         }
         isInMotion = false;
         goingUp = true;

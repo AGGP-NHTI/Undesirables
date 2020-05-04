@@ -35,7 +35,7 @@ public class FlyingPawn : DronePawn
         isDead = false;
         facingLeft = true;
         isFalling = true;
-        flyHeight = Random.Range(2f, 6.0f);
+        flyHeight = Random.Range(2f, 5.0f);
         colbox.enabled = true;
     }
 

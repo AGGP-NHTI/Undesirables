@@ -13,6 +13,9 @@ public class BossPawn : Pawn
 
     public Animator animator;
     public GameObject player;
+    public GameObject footHitboxObj;
+    public GameObject leftSwordHitboxObj;
+    public GameObject rightSwordHitboxObj;
     public GameObject spawnpoint;
     public GameObject grondSpawnpoint;
     public GameObject flyingDrone;
@@ -35,15 +38,20 @@ public class BossPawn : Pawn
     protected float startingHealth = 5000f;
     protected float currentHealth = 5000f;
     bool facingRight = false;
+    bool nextAttack = true;//to decide what melee attack is used.
     bool isAttacking = false;
     Vector3 theScale;
 
+    public Canvas bossHealthUI;
     public Slider slider;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        footHitbox = footHitboxObj.GetComponent<Collider2D>();
+        leftSwordHitbox = leftSwordHitboxObj.GetComponent<Collider2D>();
+        rightSwordHitbox = rightSwordHitboxObj.GetComponent<Collider2D>();
         slider.minValue = 0;
         slider.maxValue = startingHealth;
         currentState = new States(stateWalking);
@@ -57,19 +65,21 @@ public class BossPawn : Pawn
         if (!bossHasDied)
         {
 
-            if (currentState == stateIdle && isCloseToPlayer())
+            if (currentState == stateIdle && isCloseToPlayer() && attackTime > 0)
             {
                 if (Time.time > attackTime + timerStart)
                 {
                     if (getDist() <= 1.4f)
                     {
                         currentState = new States(stateStomp);
-                     
+
+                        nextAttack = false;
                     }
                     else
                     {
                         currentState = new States(stateSwing);
-                       
+
+                        nextAttack = true;
                     }
 
 
@@ -116,12 +126,9 @@ public class BossPawn : Pawn
 
     void stateIdle()//plays idle anim and stops any other actions
     {
-        
         animatorReset();
 
         rb.velocity = moveDirection * 0f;
-
-
 
         if (!isCloseToPlayer())
         {
@@ -129,7 +136,6 @@ public class BossPawn : Pawn
 
             currentState();
         }
-    
     }
 
     void stateWalking()
@@ -155,13 +161,13 @@ public class BossPawn : Pawn
     void stateStomp()
     {
         animatorReset();
-
         StartCoroutine(stomp());
     }
 
     IEnumerator stomp()
     {
         animator.SetBool("Stomp", true);
+
 
         isAttacking = true;
         yield return new WaitForSeconds(1.317f);
@@ -251,7 +257,7 @@ public class BossPawn : Pawn
     {
         animator.SetBool("hasDied", true);
 
-
+        bossHealthUI.gameObject.SetActive(false);
 
         animatorReset();
 
@@ -368,6 +374,5 @@ public class BossPawn : Pawn
     {
         currentState = new States(stateIdle);
     }
-
 }
 

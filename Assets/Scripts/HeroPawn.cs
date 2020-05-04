@@ -1,12 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HeroPawn : Pawn
 {
+
     public bool isDead = false;
 
     public float Health = 100.0f;
+
+    protected float Health = 100.0f;
+
     public GameObject grenadePrefab;
     public GameObject grenadeLeftPrefab;
     public GameObject grenadeSpawnLoc;
@@ -20,20 +25,26 @@ public class HeroPawn : Pawn
     private bool ispAing = false;
     private bool ispAingInAir = false;
     private bool ismAingInAir = false;
+    private bool isPlayerDead;
     public bool inAir = false;
     public Vector3 theScale;
     private float jumpForce = 6f;
+    public Canvas playerHealth;
+    public Slider sliderHealth;
 
     void Start()
     {
+        isPlayerDead = false;
         rb = gameObject.GetComponent<Rigidbody2D>();
         hammerHitBox.enabled = false;
         theScale = Vector3.zero;
         facingRight = true;
+        sliderHealth.maxValue = Health;
     }
 
     private void Update()
     {
+        sliderHealth.value = Health;
         if (ismAing)
         {
             if (attackCoolDwn > 0f)
@@ -104,47 +115,58 @@ public class HeroPawn : Pawn
 
     public virtual void Horizontal(float value)
     {
-
-        if (value == -1)
+        if (isPlayerDead == false)
         {
-            gameObject.GetComponent<Animator>().SetBool("isWalking", true);
-            rb.velocity = new Vector2(-1 * Speed, rb.velocity.y);
-            Flip();
-        }
-        if (value == 1)
-        {
-            gameObject.GetComponent<Animator>().SetBool("isWalking", true);
-            rb.velocity = new Vector2(1 * Speed, rb.velocity.y);
-            Flip();
-        }
-        if (value == 0)
-        {
-            gameObject.GetComponent<Animator>().SetBool("isWalking", false);
-            rb.velocity = new Vector2(0f, rb.velocity.y);
+            if (value == -1)
+            {
+                gameObject.GetComponent<Animator>().SetBool("isWalking", true);
+                rb.velocity = new Vector2(-1 * Speed, rb.velocity.y);
+                Flip();
+            }
+            if (value == 1)
+            {
+                gameObject.GetComponent<Animator>().SetBool("isWalking", true);
+                rb.velocity = new Vector2(1 * Speed, rb.velocity.y);
+                Flip();
+            }
+            if (value == 0)
+            {
+                gameObject.GetComponent<Animator>().SetBool("isWalking", false);
+                rb.velocity = new Vector2(0f, rb.velocity.y);
+            }
         }
     }
 
     public virtual void Fire1(bool value)
     {
-        if ((value) && (inAir == false))
+        if (isPlayerDead == false)
         {
-            Jump();
+            if ((value) && (inAir == false))
+            {
+                Jump();
+            }
         }
     }
 
     public virtual void Fire2(bool value)
     {
-        if ((value) && (ismAing == false))
+        if (isPlayerDead == false)
         {
-            mAttack();
+            if ((value) && (ismAing == false))
+            {
+                mAttack();
+            }
         }
     }
 
     public virtual void Fire3(bool value)
     {
-        if ((value) && (ispAing == false))
+        if (isPlayerDead == false)
         {
-            pAttack();
+            if ((value) && (ispAing == false))
+            {
+                pAttack();
+            }
         }
     }
 
@@ -216,7 +238,15 @@ public class HeroPawn : Pawn
         Debug.Log(Health);
         if (Health <= 0f)
         {
+
             isDead = true;
+
+            isPlayerDead = true;
+            gameObject.GetComponent<Animator>().SetBool("isHeroDead", true);
+            gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+            gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+            //Destroy(gameObject, 5f);
+
             Debug.Log(gameObject.name + " has died!");
             IgnoresDamage = true;
             //Game.Self.PlayerDied(this, Source, EventInfo, Instigator);

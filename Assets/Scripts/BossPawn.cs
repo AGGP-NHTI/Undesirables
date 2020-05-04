@@ -39,6 +39,8 @@ public class BossPawn : Pawn
     bool facingRight = false;
     bool isAttacking = false;
     Vector3 theScale;
+    public AudioSource stompAudio;
+    public AudioSource swordAudio;
 
     public Canvas bossHealthUI;
     public Slider slider;
@@ -50,7 +52,6 @@ public class BossPawn : Pawn
         slider.minValue = 0;
         slider.maxValue = startingHealth;
         currentState = new States(stateWalking);
-
         currentState();
     }
 
@@ -160,7 +161,7 @@ public class BossPawn : Pawn
     IEnumerator stomp()
     {
         animator.SetBool("Stomp", true);
-
+        stompAudio.Play();
 
         isAttacking = true;
         yield return new WaitForSeconds(1.317f);
@@ -183,7 +184,9 @@ public class BossPawn : Pawn
 
 
         isAttacking = true;
-        yield return new WaitForSeconds(2.1f);
+        yield return new WaitForSeconds(1.1f);
+        swordAudio.Play();
+        yield return new WaitForSeconds(1f);
         isAttacking = false;
 
 

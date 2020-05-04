@@ -9,7 +9,6 @@ public class BossSwordAttack : Actor
     public virtual void OnTriggerEnter2D(Collider2D other)
     {
         HeroPawn OtherActor = other.gameObject.GetComponentInParent<HeroPawn>();
-
         if(OtherActor)
         {         
             OtherActor.TakeDamage(this, damageAmount, new DamageEventInfo(), Owner);

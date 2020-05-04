@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 1262835228}
   - component: {fileID: 1262835229}
   - component: {fileID: 1262835230}
+  - component: {fileID: 80798769}
   m_Layer: 10
   m_Name: HammerHitBox
   m_TagString: Untagged
@@ -104,6 +105,103 @@ MonoBehaviour:
   LogDamageEvents: 1
   IsSpectator: 1
   hammerHitBox: {fileID: 1262835229}
+  audio: {fileID: 80798769}
+--- !u!82 &80798769
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262835227}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 40c0ce8c025876f4dac2587c22eeb19c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &307420531457066111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1880,6 +1978,16 @@ MonoBehaviour:
   IsSpectator: 1
   isDead: 0
   Health: 100
+  body: {fileID: 5943298670899990678}
+  head: {fileID: 1334174018630575545}
+  upperArmLeft: {fileID: 8906182219802501203}
+  upperArmRight: {fileID: 563908447064553322}
+  lowerArmLeft: {fileID: 1337667324148086760}
+  lowerArmRight: {fileID: 3920184916825894015}
+  upperLegLeft: {fileID: 4777653980328191536}
+  upperLegRight: {fileID: 6996221820747462049}
+  lowerLegLeft: {fileID: 1870546287366730721}
+  lowerLegRight: {fileID: 6122224565863832585}
   grenadePrefab: {fileID: 7237384474512951766, guid: d910a354587e0ab4b8deecb3c7c86ab1,
     type: 3}
   grenadeLeftPrefab: {fileID: 5456565940200236776, guid: 9349808ab60d6dc409e19287addad520,

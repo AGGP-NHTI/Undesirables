@@ -8,6 +8,17 @@ public class HeroPawn : Pawn
 
     public bool isDead = false;
     public float Health = 100.0f;
+    public SpriteRenderer body;
+    public SpriteRenderer head;
+    public SpriteRenderer upperArmLeft;
+    public SpriteRenderer upperArmRight;
+    public SpriteRenderer lowerArmLeft;
+    public SpriteRenderer lowerArmRight;
+    public SpriteRenderer upperLegLeft;
+    public SpriteRenderer upperLegRight;
+    public SpriteRenderer lowerLegLeft;
+    public SpriteRenderer lowerLegRight;
+
     public GameObject grenadePrefab;
     public GameObject grenadeLeftPrefab;
     public GameObject grenadeSpawnLoc;
@@ -16,15 +27,17 @@ public class HeroPawn : Pawn
     public float Speed = 50f;
     private float attackCoolDwn = 0.35f;
     private float ProjattackCoolDwn = 0.3f;
+    private float hurtTime = 0.2f;
     public bool facingRight;
     private bool ismAing = false;
     private bool ispAing = false;
     private bool ispAingInAir = false;
     private bool ismAingInAir = false;
+    private bool isHurt = false;
     private bool isPlayerDead;
     public bool inAir = false;
     public Vector3 theScale;
-    private float jumpForce = 6f;
+    private float jumpForce = 6.5f;
     public Canvas playerHealth;
     public Slider sliderHealth;
 
@@ -41,6 +54,29 @@ public class HeroPawn : Pawn
     private void Update()
     {
         sliderHealth.value = Health;
+
+        if (isHurt)
+        {
+            if (hurtTime <= 0f)
+            {
+                body.color = new Color(1f, 1f, 1f, 1f);
+                head.color = new Color(1f, 1f, 1f, 1f);
+                upperLegRight.color = new Color(1f, 1f, 1f, 1f);
+                upperLegLeft.color = new Color(1f, 1f, 1f, 1f);
+                upperArmRight.color = new Color(1f, 1f, 1f, 1f);
+                upperArmLeft.color = new Color(1f, 1f, 1f, 1f);
+                lowerLegRight.color = new Color(1f, 1f, 1f, 1f);
+                lowerLegLeft.color = new Color(1f, 1f, 1f, 1f);
+                lowerArmRight.color = new Color(1f, 1f, 1f, 1f);
+                lowerArmLeft.color = new Color(1f, 1f, 1f, 1f);
+                isHurt = false;
+                hurtTime = 0.2f;
+            }
+            else
+            {
+                hurtTime = hurtTime - Time.deltaTime;
+            }
+        }
         if (ismAing)
         {
             if (attackCoolDwn > 0f)
@@ -228,6 +264,18 @@ public class HeroPawn : Pawn
 
     protected override bool ProcessDamage(Actor Source, float Value, DamageEventInfo EventInfo, Controller Instigator)
     {
+        isHurt = true;
+        body.color = new Color(1f, 0f, 0f, 1f);
+        head.color = new Color(1f, 0f, 0f, 1f);
+        upperArmLeft.color = new Color(1f, 0f, 0f, 1f);
+        upperArmRight.color = new Color(1f, 0f, 0f, 1f);
+        upperLegLeft.color = new Color(1f, 0f, 0f, 1f);
+        upperLegRight.color = new Color(1f, 0f, 0f, 1f);
+        lowerArmLeft.color = new Color(1f, 0f, 0f, 1f);
+        lowerArmRight.color = new Color(1f, 0f, 0f, 1f);
+        lowerLegLeft.color = new Color(1f, 0f, 0f, 1f);
+        lowerLegRight.color = new Color(1f, 0f, 0f, 1f);
+
         LOG("Took Damage");
         Controller controller = GetController();
         Health = Health - Value;

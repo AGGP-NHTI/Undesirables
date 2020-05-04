@@ -13,9 +13,6 @@ public class BossPawn : Pawn
 
     public Animator animator;
     public GameObject player;
-    public GameObject footHitboxObj;
-    public GameObject leftSwordHitboxObj;
-    public GameObject rightSwordHitboxObj;
     public GameObject spawnpoint;
     public GameObject grondSpawnpoint;
     public GameObject flyingDrone;
@@ -49,9 +46,6 @@ public class BossPawn : Pawn
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        footHitbox = footHitboxObj.GetComponent<Collider2D>();
-        leftSwordHitbox = leftSwordHitboxObj.GetComponent<Collider2D>();
-        rightSwordHitbox = rightSwordHitboxObj.GetComponent<Collider2D>();
         slider.minValue = 0;
         slider.maxValue = startingHealth;
         currentState = new States(stateWalking);

@@ -41,12 +41,13 @@ public class HeroPawn : Pawn
     public bool inAir = false;
     public Vector3 theScale;
     private float jumpForce = 6.5f;
-    public int numOfGrenades = 0;
+    public int numOfGrenades;
     public Canvas playerHealth;
     public Slider sliderHealth;
 
     void Start()
     {
+        numOfGrenades = 0;
         Grenades.Add(grenadePrefab);
         numOfGrenades++;
         Grenades.Add(grenadePrefab);

@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HeroPawn : Pawn
 {
+    public TextMeshPro textGrenade;
     public List<GameObject> Grenades = new List<GameObject>();
 
     public bool isDead = false;
@@ -39,7 +41,7 @@ public class HeroPawn : Pawn
     public bool inAir = false;
     public Vector3 theScale;
     private float jumpForce = 6.5f;
-    private int numOfGrenades = 0;
+    public int numOfGrenades = 0;
     public Canvas playerHealth;
     public Slider sliderHealth;
 
@@ -60,6 +62,7 @@ public class HeroPawn : Pawn
     private void Update()
     {
         sliderHealth.value = Health;
+        textGrenade.text = numOfGrenades.ToString();
 
         if (isHurt)
         {
@@ -122,10 +125,12 @@ public class HeroPawn : Pawn
                     if (facingRight)
                     {
                         Instantiate(grenadePrefab, grenadeSpawnLoc.transform.position, Quaternion.identity);
+                        numOfGrenades--;
                     }
                     else
                     {
                         Instantiate(grenadeLeftPrefab, grenadeSpawnLoc.transform.position, Quaternion.identity);
+                        numOfGrenades--;
                     }
                     ProjattackCoolDwn = 0.3f;
                     gameObject.GetComponent<Animator>().SetBool("ProjInAir", false);
@@ -137,10 +142,12 @@ public class HeroPawn : Pawn
                     if (facingRight)
                     {
                         Instantiate(grenadePrefab, grenadeSpawnLoc.transform.position, Quaternion.identity);
+                        numOfGrenades--;
                     }
                     else
                     {
                         Instantiate(grenadeLeftPrefab, grenadeSpawnLoc.transform.position, Quaternion.identity);
+                        numOfGrenades--;
                     }
                     ProjattackCoolDwn = 0.3f;
                     gameObject.GetComponent<Animator>().SetBool("isProjAtt", false);
@@ -203,7 +210,10 @@ public class HeroPawn : Pawn
         {
             if ((value) && (ispAing == false))
             {
-                pAttack();
+                if (numOfGrenades >= 1)
+                {
+                    pAttack();
+                }
             }
         }
     }

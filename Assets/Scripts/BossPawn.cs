@@ -13,9 +13,6 @@ public class BossPawn : Pawn
 
     public Animator animator;
     public GameObject player;
-    public GameObject footHitboxObj;
-    public GameObject leftSwordHitboxObj;
-    public GameObject rightSwordHitboxObj;
     public GameObject spawnpoint;
     public GameObject grondSpawnpoint;
     public GameObject flyingDrone;

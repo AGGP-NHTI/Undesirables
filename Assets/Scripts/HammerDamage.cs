@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HammerDamage : HeroPawn
+public class HammerDamage : Pawn
 {
     private float damageAmount = 100f;
+    public Collider2D hammerHitBox;
     
 
     void Start()

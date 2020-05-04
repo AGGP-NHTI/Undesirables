@@ -7,7 +7,6 @@ public class HeroPawn : Pawn
 {
 
     public bool isDead = false;
-
     public float Health = 100.0f;
     public GameObject grenadePrefab;
     public GameObject grenadeLeftPrefab;

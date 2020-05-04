@@ -21,7 +21,7 @@ public class BossPawn : Pawn
     public GameObject groundDrone;
     
 
-    public bool bossHasDied = false;
+    public bool isDead = false;
 
     Vector2 moveDirection;
     public float moveSpeed = 5f;
@@ -58,7 +58,7 @@ public class BossPawn : Pawn
     void Update()
     {
         slider.value = currentHealth;
-        if (!bossHasDied)
+        if (!isDead)
         {
 
             if (currentState == stateIdle && isCloseToPlayer() && attackTime > 0)
@@ -308,7 +308,7 @@ public class BossPawn : Pawn
 
     void onDeath()
     {
-        bossHasDied = true;
+        isDead = true;
 
         currentState = new States(stateDeath);
 

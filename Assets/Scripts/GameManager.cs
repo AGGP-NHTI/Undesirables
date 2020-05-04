@@ -2,82 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject mainMenuPanel;
-    public GameObject optionsPanel;
-    public AudioMixer audioMixer;
-    string mainMenuScene = "MainMenu";
+    public GameObject Boss;
+    public GameObject Player;
 
-    public static GameManager instance;
+    public GameObject winCanvas;
+    public GameObject loseCanvas;
 
-    public GameObject MainMenuObject;
-
-    private void Awake()
+    void Start()
     {
+        
+    }
 
-
-        if (instance == null)
+    
+    void Update()
+    {
+        /*if(Boss.isDead)
         {
-            instance = this;
-            SceneManager.sceneLoaded += OnSceneLoaded;
+            winCanvas.setActive(true);
         }
-        else
+        else if(Player.isDead)
         {
-            Destroy(gameObject);
-        }
+            loseCanvas.SetActive(true);
+        }*/
     }
 
-
-    private void Start()
+    void getScene()
     {
-        DontDestroyOnLoad(gameObject);
+        //SceneManager.GetActiveScene().name;
     }
-
-
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        MainMenuObject.SetActive(false);
-    }
-
-    public void EnterOptions()
-    {
-        mainMenuPanel.SetActive(false);
-        optionsPanel.SetActive(true);
-    }
-
-    public void SetVolume(float volume)
-    {
-        audioMixer.SetFloat("MasterVolume", volume);
-        Debug.Log(volume);
-    }
-
-    public void BackButton()
-    {
-        mainMenuPanel.SetActive(true);
-        optionsPanel.SetActive(false);
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        if (scene.name == mainMenuScene)
-        {
-            MainMenuObject.SetActive(true);
-        }
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
-
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#endif
-
-    }
-
 }
-

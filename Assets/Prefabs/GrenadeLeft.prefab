@@ -135,8 +135,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoresDamage: 1
   LogDamageEvents: 1
-  explosion: {fileID: 8897569312447681133, guid: a4a654801da7e0b4895f61954febdc48,
-    type: 3}
   damageAmount: 50
   movementSpeed: 5
   lifetime: 2

@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class WinTransition : MonoBehaviour
 {
+    public GameObject player;
+
     // Start is called before the first frame update
     void Awake()
     {
         StartCoroutine(timer());
+        player.GetComponent<HeroPawn>().IgnoresDamage = true;
     }
 
     

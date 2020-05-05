@@ -8,6 +8,7 @@ public class MenuScript : MonoBehaviour
 {
     public GameObject mainMenuPanel;
     public GameObject optionsPanel;
+    public GameObject howToPanel;
     public AudioMixer audioMixer;
     string mainMenuScene = "MainMenu";
 
@@ -49,6 +50,12 @@ public class MenuScript : MonoBehaviour
         optionsPanel.SetActive(true);
     }
 
+    public void EnterHowTo()
+    {
+        mainMenuPanel.SetActive(false);
+        howToPanel.SetActive(true);
+    }
+
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat("MasterVolume", volume);
@@ -59,6 +66,7 @@ public class MenuScript : MonoBehaviour
     {
         mainMenuPanel.SetActive(true);
         optionsPanel.SetActive(false);
+        howToPanel.SetActive(false);
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)

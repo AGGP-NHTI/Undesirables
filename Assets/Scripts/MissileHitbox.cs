@@ -5,11 +5,12 @@ using UnityEngine;
 public class MissileHitbox : Actor
 {
     public GameObject mainMissile;
+    public GameObject explosion;
     float damageAmount = 50f;
 
     void Start()
     {
-        Destroy(mainMissile, 3f);
+        Invoke("OnDeath", 3f); 
     }
 
     public virtual void OnTriggerEnter2D(Collider2D other)
@@ -20,7 +21,23 @@ public class MissileHitbox : Actor
         {
             OtherActor.TakeDamage(this, damageAmount, new DamageEventInfo(), Owner);
 
-            Destroy(mainMissile);
+            OnDeath();
+        }
+        else if (other.gameObject.GetComponent<Grenade>() || other.gameObject.GetComponent<GrenadeLeft>())
+        {
+            if(other.gameObject.GetComponent<Grenade>())
+            {
+                other.gameObject.GetComponent<Grenade>().OnDeath();
+            }
+            else
+            {
+                other.gameObject.GetComponent<GrenadeLeft>().OnDeath();
+            }
+            OnDeath();
+        }
+        else if(other.gameObject.GetComponent<HammerDamage>())
+        {
+            OnDeath();
         }
     }
 
@@ -31,9 +48,15 @@ public class MissileHitbox : Actor
 
         if (Value > 0)
         {
-            Destroy(mainMissile);
+            OnDeath();
         }
 
         return true;
+    }
+
+    void OnDeath()
+    {
+        Instantiate(explosion, transform.position, Quaternion.identity);
+        Destroy(mainMissile);
     }
 }

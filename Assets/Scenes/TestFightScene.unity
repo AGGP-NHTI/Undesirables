@@ -498,6 +498,10 @@ PrefabInstance:
       propertyPath: sparksLoc
       value: 
       objectReference: {fileID: 636943690}
+    - target: {fileID: 1423436260, guid: 20c2741e65fadbb49bcae69bf713adf4, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
     - target: {fileID: 2056174286, guid: 20c2741e65fadbb49bcae69bf713adf4, type: 3}
       propertyPath: playerHealth
       value: 
@@ -564,6 +568,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195193804209725235, guid: 20c2741e65fadbb49bcae69bf713adf4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7392128701739086386, guid: 20c2741e65fadbb49bcae69bf713adf4,
         type: 3}

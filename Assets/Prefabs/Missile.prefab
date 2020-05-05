@@ -45,8 +45,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
+  m_Offset: {x: -0.064554214, y: 0}
+  m_Size: {x: 1.0164337, y: 1.0164337}
   m_Direction: 0
 --- !u!114 &1247057772544359504
 MonoBehaviour:
@@ -63,6 +63,8 @@ MonoBehaviour:
   IgnoresDamage: 0
   LogDamageEvents: 1
   mainMissile: {fileID: 1247057772799717870}
+  explosion: {fileID: 8897569312447681133, guid: d22c77956a2affb4f8fb6690f4b923f0,
+    type: 3}
 --- !u!1 &1247057772799717870
 GameObject:
   m_ObjectHideFlags: 0

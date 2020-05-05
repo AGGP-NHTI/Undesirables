@@ -43,7 +43,7 @@ public class MissileScript : Actor
 
         if (OtherActor)
         {
-            LOG("Help");
+            
             player = other.gameObject;
 
             playerFinder.enabled = !playerFinder.enabled;

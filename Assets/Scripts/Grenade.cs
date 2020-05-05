@@ -5,7 +5,7 @@ using UnityEngine;
 public class Grenade : Actor
 {
     public GameObject explosion;
-    public float damageAmount = 50.0f;
+    private float damageAmount = 100.0f;
     public float movementSpeed = 5f;
     public float lifetime = 2.5f;
     public Rigidbody2D rb;

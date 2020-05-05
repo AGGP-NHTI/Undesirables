@@ -52,6 +52,13 @@ public class PauseScript : MonoBehaviour
         return SceneManager.GetActiveScene().name;
     }
 
+    public void returntoMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+
+        Resume();
+    }
+
     public void Resume()
     {
         pauseMenuObject.SetActive(false);
@@ -62,7 +69,7 @@ public class PauseScript : MonoBehaviour
 
     void Pause()
     {
-        if(getScene() != "MainMenu")
+        if(getScene() != "MainMenu" && getScene() != "Scroll")
         {
             pauseMenuObject.SetActive(true);
 

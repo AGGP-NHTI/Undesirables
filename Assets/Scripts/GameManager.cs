@@ -29,8 +29,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void returnToMainMenu()
+    public void returnToMainMenu()
     {
-        
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void reloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

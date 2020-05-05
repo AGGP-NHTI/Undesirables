@@ -285,6 +285,8 @@ public class BossPawn : Pawn
         Vector2 thisOb = gameObject.transform.position;
 
         moveDirection = (target - thisOb).normalized;
+
+        moveDirection.y = 0;
     }
 
     void move()

@@ -13,7 +13,7 @@ public class scrollscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.Translate(Vector2.up * 0.004f);
+        gameObject.transform.Translate(Vector2.up * 0.01f);
         if (Input.anyKey)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);//change to load next scene instead of hard coding the second scene

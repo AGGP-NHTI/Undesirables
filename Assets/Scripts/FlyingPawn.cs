@@ -181,6 +181,7 @@ public class FlyingPawn : DronePawn
                 _controller.RequestSpectate();
             }
             isDead = true;
+            colbox.enabled = false;
             StartCoroutine(deathAn());
         }
 

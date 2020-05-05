@@ -34,8 +34,8 @@ public class BossPawn : Pawn
     float missileTimer = 10f;//10 test num, raise to 20*
     float missileTimerStart = 0f;
     float timerStart = 0f;
-    protected float startingHealth = 5000f;
-    protected float currentHealth = 5000f;
+    protected float startingHealth = 2500f;
+    protected float currentHealth = 2500;
     bool facingRight = false;
     bool isAttacking = false;
     Vector3 theScale;

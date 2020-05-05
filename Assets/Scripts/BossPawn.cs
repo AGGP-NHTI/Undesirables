@@ -83,8 +83,8 @@ public class BossPawn : Pawn
                     currentState();
 
                 }
-            }
-            else if ((currentState == stateStomp && !isAttacking || currentState == stateSwing && !isAttacking || currentState == stateMissileFire && !isAttacking) || currentState == stateIdle )//transition back to walking if player is no longer close
+            }//transition back to walking if player is no longer close or to idle if player is still nearby
+            else if ((currentState == stateStomp && !isAttacking || currentState == stateSwing && !isAttacking || currentState == stateMissileFire && !isAttacking) || currentState == stateHitstun && !isAttacking || currentState == stateCriticalHitstun && !isAttacking || currentState == stateIdle )
             {
                 if (isCloseToPlayer())
                 {
@@ -198,20 +198,43 @@ public class BossPawn : Pawn
     void stateHitstun()//can be staggered from movement patterns
     {
         animatorReset();
+
+
+        StartCoroutine(hitStun());
+    }
+
+    IEnumerator hitStun()
+    {
         animator.SetBool("hasTakenDmg", true);
 
-        Invoke("setStatetoIdle", hitStunTime);//how long he is stunned before returning to idle
-        animatorReset();
+        rb.velocity = moveDirection * 0f;
+
+        isAttacking = true;
+        yield return new WaitForSeconds(2.5f);
+        isAttacking = false;
+
+        yield return null;
     }
 
     void stateCriticalHitstun()//can be staggered from anything
     {
         animatorReset();
+
+
+        StartCoroutine(critHitStun());
+    }
+
+    IEnumerator critHitStun()
+    {
         animator.SetBool("hasTakenCrit", true);
 
+        rb.velocity = moveDirection * 0f;
 
-        Invoke("animatorReset", 2f);//return to idle animation not state//2 = hitstun anim runtime
-        Invoke("setStatetoIdle", criticalHitStunTime);//how long he is stunned before returning to idle
+        isAttacking = true;
+        yield return new WaitForSeconds(3.5f);
+        isAttacking = false;
+
+        yield return null;
     }
 
     void stateMissileFire()

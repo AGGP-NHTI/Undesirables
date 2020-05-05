@@ -60,15 +60,15 @@ public class BossPawn : Pawn
         slider.value = currentHealth;
         if (!isDead)
         {
-
-            if (currentState == stateIdle && isCloseToPlayer() && attackTime > 0)
+            //start new attack if not attacking and close to player
+            if (currentState == stateIdle && isCloseToPlayer() && !isAttacking)
             {
                 if (Time.time > attackTime + timerStart)
                 {
                     if (getDist() <= 1.4f)
                     {
                         currentState = new States(stateStomp);
-
+                        
                     }
                     else
                     {
@@ -78,7 +78,7 @@ public class BossPawn : Pawn
 
 
                     timerStart = Time.time;
-                    attackTime = 4f;//to make subsequent attacks take longer
+                    
 
                     currentState();
 
@@ -88,14 +88,14 @@ public class BossPawn : Pawn
             {
                 if (isCloseToPlayer())
                 {
-                    attackTime = 2f;
+                    
                     currentState = new States(stateIdle);
 
                     currentState();
                 }
                 else if (!isCloseToPlayer())
                 {
-                    attackTime = 2f;//to reset to default
+                    
                     currentState = new States(stateWalking);
 
                     currentState();
@@ -161,7 +161,9 @@ public class BossPawn : Pawn
     IEnumerator stomp()
     {
         animator.SetBool("Stomp", true);
+        
         stompAudio.Play();
+        
 
         isAttacking = true;
         yield return new WaitForSeconds(1.317f);
